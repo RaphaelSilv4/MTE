@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="input_style" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">#00000000</item>
+        <item name="boxBackgroundColor">#A9A9A9</item>
+        <item name="boxCornerRadiusTopEnd">40dp</item>
+        <item name="boxCornerRadiusTopStart">40dp</item>
+        <item name="boxCornerRadiusBottomEnd">40dp</item>
+        <item name="boxCornerRadiusBottomStart">40dp</item>
+        <item name="android:textColorHint">#FFFFFF</item>
+    </style>
+</resources>

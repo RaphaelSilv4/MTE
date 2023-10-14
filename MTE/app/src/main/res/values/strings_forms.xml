@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_choose">NOME DE USUÁRIO OU E-MAIL</string>
+    <string name="placeholder_login_choose">MTE EU DESCARTO</string>
+    <string name="login_password">SENHA</string>
+    <string name="placeholder_password">XXXX</string>
+    <string name="login_button">Entrar</string>
+    <string name="call_registration">Não possui uma conta? Clique Aqui para fazer seu cadastro!</string>
+</resources>

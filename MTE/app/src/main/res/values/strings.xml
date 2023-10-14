@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Eu Descarto</string>
+    <string name="login_text">Login</string>
+    <string name="open_login_text">Entrar com o seu Login</string>
+</resources>
