@@ -5,5 +5,20 @@
     <string name="login_password">SENHA</string>
     <string name="placeholder_password">XXXX</string>
     <string name="login_button">Entrar</string>
-    <string name="call_registration">Não possui uma conta? Clique Aqui para fazer seu cadastro!</string>
+    <string name="sing_up_button">Criar</string>
+    <string name="call_registration_login">Não possui uma conta? Clique Aqui para fazer seu cadastro!</string>
+    <string name="name_sing_up">NOME COMPLETO</string>
+    <string name="placeholder_name_sing_up">MTE</string>
+    <string name="cpf_sing_up">CPF</string>
+    <string name="placeholder_cpf_sing_up">000.000.000-00</string>
+    <string name="cep_sing_up">ENDEREÇO/ CEP</string>
+    <string name="placeholder_cep_sing_up">Rua/Bairro: Bom viver, 00000-000 PATOS-PB</string>
+    <string name="email_sing_up">EMAIL</string>
+    <string name="placeholder_email_sing_up">MTE2023@Gmail.com</string>
+    <string name="phone_sing_up">TELEFONE</string>
+    <string name="placeholder_phone_sing_up">(00) 0000-0000</string>
+    <string name="password_sing_up">SENHA</string>
+    <string name="password_sing_up2">CONFIRMAR SENHA</string>
+    <string name="placeholder_password_sing_up">1234</string>
+    <string name="call_registration_sing_up">Já possui uma conta? Clique Aqui para fazer Login</string>
 </resources>

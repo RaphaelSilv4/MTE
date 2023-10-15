@@ -2,4 +2,6 @@
     <string name="app_name">Eu Descarto</string>
     <string name="login_text">Login</string>
     <string name="open_login_text">Entrar com o seu Login</string>
+    <string name="sing_up_text">Criar uma conta</string>
+    <string name="open_sing_up_text">Se não possui conta, crie a sua agora mesmo!</string>
 </resources>
