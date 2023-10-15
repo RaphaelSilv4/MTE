@@ -2,13 +2,11 @@ package com.mte2023.spring_mte.attributes;
 
 import java.io.Serializable;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
 @Table(name = "tb_address")
 public class address implements Serializable{
     private static final long serialVersionUID = 1L;
