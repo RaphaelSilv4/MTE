@@ -1,13 +1,16 @@
 package com.mte2023.spring_mte.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.mte2023.spring_mte.attributes.address;
+import com.mte2023.spring_mte.attributes.Address;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -22,11 +25,16 @@ public class User implements Serializable {
     private String email;
     private String phone;
     private String password;
-    private address endereco;
+    private Address endereco;
+
+    @OneToMany(mappedBy = "user")
+    private List<Pedido_Coleta> Pedido_Coletas = new ArrayList<>();
+
+    
 
     public User() {}
 
-    public User(Long id, String nome, String email, String phone, String password, address endereco) {
+    public User(Long id, String nome, String email, String phone, String password, Address endereco) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -75,12 +83,16 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public address getEndereco() {
+    public Address getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(address endereco) {
+    public void setEndereco(Address endereco) {
         this.endereco = endereco;
+    }
+
+    public List<Pedido_Coleta> getPedido_Coletas() {
+        return Pedido_Coletas;
     }
 
     @Override

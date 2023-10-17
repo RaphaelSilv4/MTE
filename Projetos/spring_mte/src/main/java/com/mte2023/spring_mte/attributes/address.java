@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Table(name = "tb_address")
-public class address implements Serializable{
+public class Address implements Serializable{
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -20,9 +20,9 @@ public class address implements Serializable{
     private String cidade;
     private String estado_federativo;
 
-    public address() {}
+    public Address() {}
 
-    public address(int cep, int numero_casa, String nome_rua, String nome_bairro, String cidade,
+    public Address(int cep, int numero_casa, String nome_rua, String nome_bairro, String cidade,
             String estado_federativo) {
         this.cep = cep;
         this.numero_casa = numero_casa;
