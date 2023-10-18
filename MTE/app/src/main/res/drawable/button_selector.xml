@@ -1,0 +1,12 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Estado normal (sem clique) -->
+    <item android:drawable="@android:color/transparent" />
+
+    <!-- Estado pressionado (clique) -->
+    <item android:drawable="@android:color/transparent" android:state_pressed="true" />
+
+    <!-- Estado focado (se necessário, você pode adicionar um estilo diferente para o estado focado) -->
+    <item android:drawable="@android:color/transparent" android:state_focused="true" />
+
+</selector>

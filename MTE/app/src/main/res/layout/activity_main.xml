@@ -31,6 +31,7 @@
         android:id="@+id/textView2"
         android:layout_width="173dp"
         android:layout_height="28dp"
+        android:layout_marginBottom="-5dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/open_login_text"
         android:textColor="#FFF"
@@ -64,20 +65,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.594" />
 
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/login_choose"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/black_view"
         app:layout_constraintEnd_toEndOf="@+id/black_view"
-        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="@+id/black_view"
         app:layout_constraintTop_toTopOf="@+id/black_view"
-        app:layout_constraintVertical_bias="0.217"
-        android:textSize="12sp"
-        android:fontFamily="@font/nunito_sans_semibold"/>
-
+        app:layout_constraintVertical_bias="0.138" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
@@ -85,6 +86,7 @@
         android:layout_height="56dp"
         android:layout_marginTop="10dp"
         app:cardBackgroundColor="#60A6A6A6"
+        app:cardElevation="0dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="@+id/black_view"
@@ -103,7 +105,8 @@
         android:fontFamily="@font/nunito_sans_semibold"
         android:hint="@string/placeholder_login_choose"
         android:inputType="textEmailAddress"
-        android:textColorHint="000"
+        android:textColorHint="#211D1D"
+        android:textColor="#211D1D"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="@+id/cardview"
         app:layout_constraintEnd_toEndOf="@+id/black_view"
@@ -114,12 +117,12 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:text="@string/login_password"
+        android:layout_marginTop="168dp"
         android:fontFamily="@font/nunito_sans_semibold"
+        android:text="@string/login_password"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/black_view"
-        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="@+id/black_view"
         app:layout_constraintTop_toTopOf="@+id/black_view" />
 
@@ -129,6 +132,7 @@
         android:layout_height="56dp"
         android:layout_marginTop="10dp"
         app:cardBackgroundColor="#60A6A6A6"
+        app:cardElevation="0dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="@+id/black_view"
         app:layout_constraintStart_toStartOf="@+id/black_view"
@@ -142,7 +146,8 @@
         android:fontFamily="@font/nunito_sans_semibold"
         android:hint="@string/placeholder_password"
         android:inputType="textPassword"
-        android:textColorHint="000"
+        android:textColorHint="#211D1D"
+        android:textColor="#211D1D"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="@+id/cardview2"
         app:layout_constraintEnd_toEndOf="@+id/black_view"
@@ -155,9 +160,9 @@
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/botao_customizado"
-        android:textAllCaps="false"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/login_button"
+        android:textAllCaps="false"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="@+id/black_view"
@@ -168,16 +173,18 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="330dp"
-        android:text="to do: texto de conexão com tela increva-se"
+        android:layout_width="212dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:gravity="center"
+        android:text="@string/call_registration_sing_up"
+        android:textColor="#A6A6A6"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/black_view"
         app:layout_constraintEnd_toEndOf="@+id/black_view"
-        app:layout_constraintHorizontal_bias="0.475"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toTopOf="@+id/with_view"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/black_view" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -190,5 +197,41 @@
         app:layout_constraintTop_toBottomOf="@+id/with_view"
         app:layout_constraintVertical_bias="0.111"
         app:srcCompat="@drawable/logo_mte" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="132dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:gravity="center"
+        android:text="@string/call_registration_click"
+        android:textAllCaps="false"
+        android:textColor="#A6A6A6"
+        android:textColorLink="#737373"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/black_view"
+        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintHorizontal_bias="0.663"
+        app:layout_constraintStart_toStartOf="@+id/black_view"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2"
+        android:layout_width="73dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/call_registration_sing_up2"
+        android:textAllCaps="false"
+        android:textColor="#737373"
+        app:layout_constraintBottom_toBottomOf="@+id/black_view"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

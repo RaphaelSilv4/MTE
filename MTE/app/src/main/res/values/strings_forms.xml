@@ -6,7 +6,8 @@
     <string name="placeholder_password">XXXX</string>
     <string name="login_button">Entrar</string>
     <string name="sing_up_button">Criar</string>
-    <string name="call_registration_login">Não possui uma conta? Clique Aqui para fazer seu cadastro!</string>
+    <string name="call_registration_login">Não possui uma conta?</string>
+    <string name="call_registration_login3">para fazer seu cadastro!</string>
     <string name="name_sing_up">NOME COMPLETO</string>
     <string name="placeholder_name_sing_up">MTE</string>
     <string name="cpf_sing_up">CPF</string>
@@ -20,5 +21,7 @@
     <string name="password_sing_up">SENHA</string>
     <string name="password_sing_up2">CONFIRMAR SENHA</string>
     <string name="placeholder_password_sing_up">1234</string>
-    <string name="call_registration_sing_up">Já possui uma conta? Clique Aqui para fazer Login</string>
+    <string name="call_registration_sing_up">Já possui uma conta?</string>
+    <string name="call_registration_sing_up2">Clique Aqui</string>
+    <string name="call_registration_click">para fazer Login</string>
 </resources>
