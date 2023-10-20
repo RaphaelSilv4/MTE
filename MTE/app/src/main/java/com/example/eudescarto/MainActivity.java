@@ -20,5 +20,13 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, sign_up.class);
             startActivity(intent);
         });
+
+        Button button_home = findViewById(R.id.button);
+        button_home.setBackgroundResource(R.drawable.button_selector);
+
+        button_home.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, home_screen.class);
+            startActivity(intent);
+        });
     }
 }

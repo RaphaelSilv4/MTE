@@ -22,5 +22,13 @@ public class sign_up extends AppCompatActivity {
             startActivity(intent);
         });
 
+        Button button_home = findViewById(R.id.button);
+        button_home.setBackgroundResource(R.drawable.button_selector);
+
+        button_home.setOnClickListener(v -> {
+            Intent intent = new Intent(sign_up.this, home_screen.class);
+            startActivity(intent);
+        });
+
     }
 }

@@ -4,4 +4,17 @@
     <string name="open_login_text">Entrar com o seu Login</string>
     <string name="sing_up_text">Criar uma conta</string>
     <string name="open_sing_up_text">Se não possui conta, crie a sua agora mesmo!</string>
+    <string name="search_hint">Pesquisar</string>
+    <string name="menu_option1">Bonificação</string>
+    <string name="menu_option2">Solicitar coleta</string>
+    <string name="menu_option3">Conteúdo das redes sociais</string>
+    <string name="menu_option4">Histórico de descarte</string>
+    <string name="menu_option5">Área business</string>
+    <string name="menu_option6">Outros</string>
+    <string name="profile_name">fernanda blanco</string>
+    <string name="nick_name">\@fer.blanco</string>
+    <string name="cashback_text">Meus pontos de cashback:</string>
+    <string name="cashback">000</string>
+    <string name="account_text">Minha conta: </string>
+    <string name="account">000</string>
 </resources>
