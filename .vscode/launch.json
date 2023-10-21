@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringMteApplication<spring_mte>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.mte2023.spring_mte.SpringMteApplication",
+            "projectName": "spring_mte",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
