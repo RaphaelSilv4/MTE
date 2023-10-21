@@ -28,6 +28,7 @@ public class User implements Serializable {
     private String password;
     private Address endereco;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user")
     private List<Pedido_Coleta> Pedido_Coletas = new ArrayList<>();
 

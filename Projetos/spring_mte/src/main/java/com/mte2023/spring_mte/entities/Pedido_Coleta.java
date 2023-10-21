@@ -3,6 +3,7 @@ package com.mte2023.spring_mte.entities;
 import java.io.Serializable;
 import java.time.Instant;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Entity;
@@ -20,6 +21,8 @@ public class Pedido_Coleta implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-mm-dd'T'HH:mm:ss'Z'", timezone = "GMT")
     private Instant moment;
 
     @ManyToOne
