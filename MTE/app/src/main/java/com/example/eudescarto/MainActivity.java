@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         button_home.setBackgroundResource(R.drawable.button_selector);
 
         button_home.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, home_screen.class);
+            Intent intent = new Intent(MainActivity.this, profile.class);
             startActivity(intent);
         });
     }
