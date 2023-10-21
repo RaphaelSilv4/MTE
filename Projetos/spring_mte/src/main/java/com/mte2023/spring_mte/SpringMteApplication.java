@@ -11,5 +11,4 @@ public class SpringMteApplication extends TestConfig{
 	public static void main(String[] args) {
 		SpringApplication.run(SpringMteApplication.class, args);
 	}
-
 }

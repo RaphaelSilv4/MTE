@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mte2023.spring_mte.attributes.Address;
 
 import jakarta.persistence.Entity;
