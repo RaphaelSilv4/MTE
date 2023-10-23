@@ -38,6 +38,4 @@ public class TestConfig implements CommandLineRunner {
         pedido_ColetaRepositoryRepisitory.saveAll(Arrays.asList(o1, o2, o3));
     }
 
-
-
 }
