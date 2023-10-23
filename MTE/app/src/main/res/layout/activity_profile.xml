@@ -392,8 +392,99 @@
                 app:layout_constraintTop_toBottomOf="@+id/cardview11"
                 app:layout_constraintVertical_bias="1.0" />
 
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="93dp"
+                android:layout_height="57dp"
+                android:layout_marginEnd="-5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardview9"
+                app:layout_constraintEnd_toEndOf="@+id/cardview9"
+                app:layout_constraintTop_toTopOf="@+id/cardview9"
+                app:srcCompat="@drawable/lixo" />
 
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="93dp"
+                android:layout_height="57dp"
+                android:layout_marginEnd="-5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardview6"
+                app:layout_constraintEnd_toEndOf="@+id/cardview6"
+                app:layout_constraintTop_toTopOf="@+id/cardview6"
+                app:srcCompat="@drawable/presente" />
 
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="93dp"
+                android:layout_height="57dp"
+                android:layout_marginEnd="-5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardview7"
+                app:layout_constraintEnd_toEndOf="@+id/cardview7"
+                app:layout_constraintTop_toTopOf="@+id/cardview7"
+                app:srcCompat="@drawable/saco_lixo" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="93dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="-5dp"
+                android:layout_marginEnd="-5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardview8"
+                app:layout_constraintEnd_toEndOf="@+id/cardview8"
+                app:layout_constraintTop_toTopOf="@+id/cardview8"
+                app:srcCompat="@drawable/social" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="93dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="-5dp"
+                android:layout_marginEnd="-5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardview10"
+                app:layout_constraintEnd_toEndOf="@+id/cardview10"
+                app:layout_constraintTop_toTopOf="@+id/cardview10"
+                app:srcCompat="@drawable/estrela" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="93dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="-5dp"
+                android:layout_marginEnd="-5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardview11"
+                app:layout_constraintEnd_toEndOf="@+id/cardview11"
+                app:layout_constraintTop_toTopOf="@+id/cardview11"
+                app:srcCompat="@drawable/outros" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="93dp"
+                android:layout_height="57dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/cardview4"
+                app:layout_constraintTop_toTopOf="@+id/cardview4"
+                app:srcCompat="@drawable/logo_mte_verde" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="-30dp"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#02140A"
+                app:layout_constraintBottom_toBottomOf="@+id/cardview"
+                app:layout_constraintEnd_toStartOf="@+id/textView19"
+                app:layout_constraintStart_toStartOf="@+id/cardview"
+                app:layout_constraintTop_toTopOf="@+id/cardview">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user_profile" />
+
+            </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
