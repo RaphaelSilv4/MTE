@@ -13,14 +13,22 @@ import com.mte2023.spring_mte.repositories.UserRepisitory;
 public class UserService {
     
     @Autowired
-    private UserRepisitory repisitory;
+    private UserRepisitory repository;
 
     public List<User> findAll(){
-        return repisitory.findAll();
+        return repository.findAll();
     }
 
     public User findById(Long id){
-        Optional<User> obj = repisitory.findById(id);
+        Optional<User> obj = repository.findById(id);
         return obj.get();
+    }
+
+    public User insert(User obj){
+        return repository.save(obj);
+    }
+
+    public void delete(Long id){
+        repository.deleteById(id);
     }
 }
