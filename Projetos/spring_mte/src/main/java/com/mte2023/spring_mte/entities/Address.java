@@ -1,10 +1,15 @@
-package com.mte2023.spring_mte.attributes;
+package com.mte2023.spring_mte.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Table(name = "tb_address")
@@ -13,6 +18,8 @@ public class Address implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
     private int cep;
     private int numero_casa;
     private String nome_rua;
@@ -20,16 +27,29 @@ public class Address implements Serializable{
     private String cidade;
     private String estado_federativo;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "endereco")
+    private List<User> users = new ArrayList<>();
+
     public Address() {}
 
-    public Address(int cep, int numero_casa, String nome_rua, String nome_bairro, String cidade,
+    public Address(Long id, int cep, int numero_casa, String nome_rua, String nome_bairro, String cidade,
             String estado_federativo) {
+        this.id = id;
         this.cep = cep;
         this.numero_casa = numero_casa;
         this.nome_rua = nome_rua;
         this.nome_bairro = nome_bairro;
         this.cidade = cidade;
         this.estado_federativo = estado_federativo;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public int getCep() {
