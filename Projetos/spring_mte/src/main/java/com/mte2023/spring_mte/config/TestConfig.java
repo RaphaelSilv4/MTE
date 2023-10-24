@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
+import com.mte2023.spring_mte.entities.Payment;
 import com.mte2023.spring_mte.entities.Pedido_Coleta;
 import com.mte2023.spring_mte.entities.User;
 import com.mte2023.spring_mte.entities.enums.Pedido_ColetaStatus;
@@ -23,7 +24,7 @@ public class TestConfig implements CommandLineRunner {
     private UserRepisitory userRepisitory;
 
     @Autowired
-    private Pedido_ColetaRepository pedido_ColetaRepositoryRepisitory;
+    private Pedido_ColetaRepository pedido_ColetaRepository;
 
     @Override
     
@@ -36,7 +37,12 @@ public class TestConfig implements CommandLineRunner {
         Pedido_Coleta o3 = new Pedido_Coleta(null, Instant.parse("2019-07-22T15:21:22Z"), Pedido_ColetaStatus.WAITING_PAYMENT,u1);
 
         userRepisitory.saveAll(Arrays.asList(u1, u2));
-        pedido_ColetaRepositoryRepisitory.saveAll(Arrays.asList(o1, o2, o3));
+        pedido_ColetaRepository.saveAll(Arrays.asList(o1, o2, o3));
+
+        Payment pay1 = new Payment(null, Instant.parse("2019-06-20T21:53:07Z"), o1);
+        o1.setPayment(pay1);
+
+        pedido_ColetaRepository.save(o1);
     }
 
 }

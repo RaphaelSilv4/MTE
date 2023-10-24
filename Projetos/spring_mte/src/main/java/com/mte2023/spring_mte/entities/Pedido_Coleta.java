@@ -7,6 +7,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.mte2023.spring_mte.entities.enums.Pedido_ColetaStatus;
 
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,14 +28,15 @@ public class Pedido_Coleta implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
     private Instant moment;
 
-    private Integer pedido_ColetaStatus;
-
-    
+    private Integer pedido_ColetaStatus; /* Tratamento Integer e interno a classe Pedido_Coleta */
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
+    @OneToOne(mappedBy = "pedido_Coleta", cascade = CascadeType.ALL) /* No caso de 1 para 1 as duas entidades possuem o mesmo ID */
+    private Payment payment;
+    
     public Pedido_Coleta(){}
 
     public Pedido_Coleta(Long id, Instant moment, Pedido_ColetaStatus pedido_ColetaStatus, User user) {
@@ -64,7 +67,7 @@ public class Pedido_Coleta implements Serializable {
     }
 
     public void setPedido_ColetaStatus(Pedido_ColetaStatus pedido_ColetaStatus) {
-        if (pedido_ColetaStatus != null){
+        if(pedido_ColetaStatus != null){
             this.pedido_ColetaStatus = pedido_ColetaStatus.getCode();
         }
     }
@@ -76,6 +79,15 @@ public class Pedido_Coleta implements Serializable {
     public void setUser(User user) {
         this.user = user;
     }
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
 
     @Override
     public int hashCode() {
