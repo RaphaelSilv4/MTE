@@ -6,18 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+
+public class sign_up extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sign_up);
 
         Button meuBotao = findViewById(R.id.button2);
         meuBotao.setBackgroundResource(R.drawable.button_selector);
 
         meuBotao.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, sign_up.class);
+            Intent intent = new Intent(sign_up.this, MainActivity.class);
             startActivity(intent);
         });
 
@@ -25,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
         button_home.setBackgroundResource(R.drawable.button_selector);
 
         button_home.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, profile.class);
+            Intent intent = new Intent(sign_up.this, profile.class);
             startActivity(intent);
         });
+
     }
 }
