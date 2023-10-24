@@ -21,7 +21,7 @@ public enum Pedido_ColetaStatus {
     public static Pedido_ColetaStatus valueOf(int code){
         for(Pedido_ColetaStatus value : Pedido_ColetaStatus.values()) {
             if (value.getCode() == code){
-                return value; 
+                return value;
             }
         }
         throw new IllegalArgumentException("Invalid Pedido_ColetaStatus code");
