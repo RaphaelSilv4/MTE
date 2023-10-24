@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.Instant;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.mte2023.spring_mte.entities.enums.Pedido_ColetaStatus;
 
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Entity;
@@ -22,8 +23,12 @@ public class Pedido_Coleta implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-mm-dd'T'HH:mm:ss'Z'", timezone = "GMT")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
     private Instant moment;
+
+    private Integer pedido_ColetaStatus;
+
+    
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -31,9 +36,10 @@ public class Pedido_Coleta implements Serializable {
 
     public Pedido_Coleta(){}
 
-    public Pedido_Coleta(Long id, Instant moment, User user) {
+    public Pedido_Coleta(Long id, Instant moment, Pedido_ColetaStatus pedido_ColetaStatus, User user) {
         this.id = id;
         this.moment = moment;
+        setPedido_ColetaStatus(pedido_ColetaStatus);
         this.user = user;
     }
 
@@ -51,6 +57,16 @@ public class Pedido_Coleta implements Serializable {
 
     public void setMoment(Instant moment) {
         this.moment = moment;
+    }
+
+    public Pedido_ColetaStatus getPedido_ColetaStatus() {
+        return Pedido_ColetaStatus.valueOf(pedido_ColetaStatus);
+    }
+
+    public void setPedido_ColetaStatus(Pedido_ColetaStatus pedido_ColetaStatus) {
+        if (pedido_ColetaStatus != null){
+            this.pedido_ColetaStatus = pedido_ColetaStatus.getCode();
+        }
     }
 
     public User getUser() {
