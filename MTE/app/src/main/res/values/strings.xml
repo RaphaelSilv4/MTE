@@ -17,4 +17,8 @@
     <string name="cashback">000</string>
     <string name="account_text">Minha conta: </string>
     <string name="account">000</string>
+    <string name="profile_text">Meu perfil</string>
+    <string name="history_text">Histórico de Descartes</string>
+    <string name="mensagem_text">Mensagens</string>
+    <string name="config_text">Configurações</string>
 </resources>
