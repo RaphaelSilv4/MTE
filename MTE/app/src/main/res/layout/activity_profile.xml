@@ -37,6 +37,7 @@
                 android:id="@+id/textView19"
                 android:layout_width="210dp"
                 android:layout_height="24dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="-50dp"
                 android:text="@string/profile_name"
@@ -50,6 +51,7 @@
                 android:id="@+id/textView20"
                 android:layout_width="210dp"
                 android:layout_height="24dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="-20dp"
                 android:layout_marginEnd="-30dp"
                 android:fontFamily="@font/nunito_sans_semibold"
@@ -240,7 +242,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardview4"
                 android:layout_width="425dp"
-                android:layout_height="70dp"
+                android:layout_height="80dp"
                 app:cardBackgroundColor="#02140A"
                 app:cardElevation="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -286,8 +288,9 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_search"
-                android:layout_width="263dp"
-                android:layout_height="56dp"
+                android:layout_width="238dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="20dp"
                 android:background="#00000000"
                 android:fontFamily="@font/nunito_sans_semibold"
                 android:hint="@string/search_hint"
@@ -297,6 +300,7 @@
                 android:textSize="13sp"
                 app:layout_constraintBottom_toBottomOf="@+id/cardview5"
                 app:layout_constraintEnd_toEndOf="@+id/cardview5"
+                app:layout_constraintStart_toStartOf="@+id/cardview5"
                 app:layout_constraintTop_toTopOf="@+id/cardview5" />
 
 
@@ -466,12 +470,13 @@
                 app:srcCompat="@drawable/logo_mte_verde" />
 
             <androidx.cardview.widget.CardView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:id="@+id/cardView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_marginEnd="-30dp"
+                app:cardBackgroundColor="#02140A"
                 app:cardCornerRadius="100dp"
                 app:cardElevation="0dp"
-                app:cardBackgroundColor="#02140A"
                 app:layout_constraintBottom_toBottomOf="@+id/cardview"
                 app:layout_constraintEnd_toStartOf="@+id/textView19"
                 app:layout_constraintStart_toStartOf="@+id/cardview"
@@ -479,12 +484,128 @@
 
                 <ImageView
                     android:id="@+id/imageView10"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/user_profile" />
 
             </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="250dp"
+                android:layout_marginBottom="-5dp"
+                android:src="@drawable/search"
+                app:layout_constraintBottom_toBottomOf="@+id/cardview5"
+                app:layout_constraintEnd_toEndOf="@+id/cardview5"
+                app:layout_constraintStart_toStartOf="@+id/cardview5"
+                app:layout_constraintTop_toTopOf="@+id/cardview5" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginBottom="-5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user_profile"
+                app:layout_constraintBottom_toTopOf="@+id/textView15"
+                app:layout_constraintStart_toStartOf="@+id/cardview4"
+                app:layout_constraintTop_toTopOf="@+id/cardview4" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/profile_text"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardview4"
+                app:layout_constraintStart_toStartOf="@+id/cardview4" />
+
+            <TextView
+                android:id="@+id/textViewHistory"
+                android:layout_width="67dp"
+                android:layout_height="23dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/history_text"
+                android:textSize="10sp"
+                android:textColor="#fff"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/cardview4"
+                app:layout_constraintEnd_toStartOf="@+id/imageView8"
+                app:layout_constraintStart_toEndOf="@+id/textView15" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="-5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/delete"
+                app:layout_constraintBottom_toTopOf="@+id/textViewHistory"
+                app:layout_constraintEnd_toStartOf="@+id/imageView8"
+                app:layout_constraintStart_toEndOf="@+id/imageView12"
+                app:layout_constraintTop_toTopOf="@+id/cardview4" />
+
+            <TextView
+                android:id="@+id/textViewmensagem"
+                android:layout_width="67dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:text="@string/mensagem_text"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardview4"
+                app:layout_constraintStart_toEndOf="@+id/imageView8" />
+
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="-5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mail"
+                app:layout_constraintBottom_toTopOf="@+id/textViewmensagem"
+                app:layout_constraintStart_toEndOf="@+id/imageView8"
+                app:layout_constraintTop_toTopOf="@+id/cardview4" />
+
+            <TextView
+                android:id="@+id/textViewconfig"
+                android:layout_width="67dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:text="@string/config_text"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardview4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewmensagem" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="-5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/settings"
+                app:layout_constraintBottom_toTopOf="@+id/textViewconfig"
+                app:layout_constraintEnd_toEndOf="@+id/cardview4"
+                app:layout_constraintStart_toEndOf="@+id/imageView14"
+                app:layout_constraintTop_toTopOf="@+id/cardview4" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
