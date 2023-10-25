@@ -406,11 +406,13 @@
                 app:layout_constraintTop_toTopOf="@+id/cardview9"
                 app:srcCompat="@drawable/lixo" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView3"
                 android:layout_width="93dp"
                 android:layout_height="57dp"
                 android:layout_marginEnd="-5dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/menu_option1_text"
                 app:layout_constraintBottom_toBottomOf="@+id/cardview6"
                 app:layout_constraintEnd_toEndOf="@+id/cardview6"
                 app:layout_constraintTop_toTopOf="@+id/cardview6"

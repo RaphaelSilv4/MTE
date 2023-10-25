@@ -21,4 +21,8 @@
     <string name="history_text">Histórico de Descartes</string>
     <string name="mensagem_text">Mensagens</string>
     <string name="config_text">Configurações</string>
+    <string name="menu_option1_text">área de bonificação</string>
+    <string name="home_option_text">voltar para a home</string>
+    <string name="bonus_text">BONIFICAÇÃO</string>
+    <string name="bonus_input_text">RESGATE SEU CUPOM DE BONIFICAÇÃO:</string>
 </resources>
