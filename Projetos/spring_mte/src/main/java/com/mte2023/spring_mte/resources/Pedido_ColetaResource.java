@@ -18,7 +18,7 @@ public class Pedido_ColetaResource {
 
     @Autowired
     private Pedido_ColetaService service;
-    
+
     @GetMapping
     public ResponseEntity<List<Pedido_Coleta>> findAll(){
         List<Pedido_Coleta> list = service.findAll();
