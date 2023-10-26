@@ -20,5 +20,6 @@ public class profile extends AppCompatActivity {
             Intent intent = new Intent(profile.this, bonus_screen.class);
             startActivity(intent);
         });
+
     }
 }

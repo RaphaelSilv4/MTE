@@ -25,4 +25,6 @@
     <string name="home_option_text">voltar para a home</string>
     <string name="bonus_text">BONIFICAÇÃO</string>
     <string name="bonus_input_text">RESGATE SEU CUPOM DE BONIFICAÇÃO:</string>
+    <string name="navbar1_text">voltar para tela de perfil</string>
+
 </resources>
