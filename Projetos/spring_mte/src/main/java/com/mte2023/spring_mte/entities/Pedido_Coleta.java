@@ -28,7 +28,7 @@ public class Pedido_Coleta implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
     private Instant moment;
 
-    private Integer pedido_ColetaStatus; /* Tratamento Integer e interno a classe Pedido_Coleta */
+    private Integer pedido_ColetaStatus; /* Tratamento Integer é interno a classe Pedido_Coleta */
 
     @ManyToOne
     @JoinColumn(name = "user_id")
