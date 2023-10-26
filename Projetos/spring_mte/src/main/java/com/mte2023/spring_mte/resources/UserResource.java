@@ -19,7 +19,7 @@ import com.mte2023.spring_mte.entities.User;
 import com.mte2023.spring_mte.services.UserService;
 
 @RestController
-@RequestMapping(value = "/users")
+@RequestMapping(value = "/user")
 public class UserResource {
 
     @Autowired
