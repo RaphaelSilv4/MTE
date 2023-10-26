@@ -113,5 +113,4 @@ public class Pedido_Coleta implements Serializable {
             return false;
         return true;
     }
-    
 }
