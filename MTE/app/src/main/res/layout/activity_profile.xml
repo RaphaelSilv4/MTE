@@ -598,7 +598,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textViewmensagem" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView15"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -606,6 +606,8 @@
                 android:layout_marginBottom="-5dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/settings"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/navbar2_text"
                 app:layout_constraintBottom_toTopOf="@+id/textViewconfig"
                 app:layout_constraintEnd_toEndOf="@+id/cardview4"
                 app:layout_constraintStart_toEndOf="@+id/imageView14"

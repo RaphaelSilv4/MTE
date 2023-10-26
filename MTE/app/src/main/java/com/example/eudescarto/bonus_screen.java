@@ -20,6 +20,9 @@ public class bonus_screen extends AppCompatActivity {
         ImageButton myButton2 = findViewById(R.id.imageView12);
         myButton.setBackgroundResource(R.drawable.button_selector);
 
+        ImageButton myButton3 = findViewById(R.id.imageView15);
+        myButton.setBackgroundResource(R.drawable.button_selector);
+
         myButton.setOnClickListener(v -> {
             Intent intent = new Intent(bonus_screen.this, profile.class);
             startActivity(intent);
@@ -27,6 +30,11 @@ public class bonus_screen extends AppCompatActivity {
 
         myButton2.setOnClickListener(v -> {
             Intent intent = new Intent(bonus_screen.this, profile.class);
+            startActivity(intent);
+        });
+
+        myButton3.setOnClickListener(v -> {
+            Intent intent = new Intent(bonus_screen.this, config_screen.class);
             startActivity(intent);
         });
 
