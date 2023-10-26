@@ -21,4 +21,15 @@
     <string name="history_text">Histórico de Descartes</string>
     <string name="mensagem_text">Mensagens</string>
     <string name="config_text">Configurações</string>
+    <string name="menu_option1_text">área de bonificação</string>
+    <string name="home_option_text">voltar para a home</string>
+    <string name="bonus_text">BONIFICAÇÃO</string>
+    <string name="bonus_input_text">RESGATE SEU CUPOM DE BONIFICAÇÃO:</string>
+    <string name="navbar1_text">voltar para tela de perfil</string>
+    <string name="navbar2_text">ir para a tela de configurações</string>
+    <string name="option_config1">CONTA</string>
+    <string name="option_config2">COLETAS (HISTÓRICO)</string>
+    <string name="option_config3">BONUS (HISTÓRICO)</string>
+    <string name="option_config4">COMPARTILHE O APP</string>
+    <string name="option_config5">SOBRE NÓS</string>
 </resources>
