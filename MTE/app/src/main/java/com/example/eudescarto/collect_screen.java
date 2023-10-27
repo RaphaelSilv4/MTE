@@ -23,6 +23,9 @@ public class collect_screen extends AppCompatActivity {
         ImageButton myButton3 = findViewById(R.id.imageView15);
         myButton.setBackgroundResource(R.drawable.button_selector);
 
+        Button myButton5 = findViewById(R.id.button2);
+        myButton.setBackgroundResource(R.drawable.button_selector);
+
         Button myButton4 = findViewById(R.id.button3);
         myButton.setBackgroundResource(R.drawable.button_selector);
 
@@ -43,6 +46,11 @@ public class collect_screen extends AppCompatActivity {
 
         myButton4.setOnClickListener(v -> {
             Intent intent = new Intent(collect_screen.this, collect_next.class);
+            startActivity(intent);
+        });
+
+        myButton5.setOnClickListener(v -> {
+            Intent intent = new Intent(collect_screen.this, collect_residence.class);
             startActivity(intent);
         });
     }

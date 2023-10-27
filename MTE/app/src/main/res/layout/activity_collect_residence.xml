@@ -19,7 +19,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="411dp"
                 android:layout_height="929dp"
-                tools:context=".collect_next">
+                tools:context=".collect_residence">
 
 
                 <TextView
@@ -27,10 +27,11 @@
                     android:layout_width="203dp"
                     android:layout_height="50dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="@string/collect_option2"
+                    android:text="@string/collect_option1_text2"
                     android:textColor="#FFF"
                     android:textSize="15sp"
                     android:textStyle="bold"
+                    android:textAllCaps="true"
                     app:layout_constraintBottom_toTopOf="@+id/black_view"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.192"
@@ -256,7 +257,7 @@
                     android:background="@drawable/button_selector"
                     android:fontFamily="@font/montserrat_bold"
                     android:gravity="left"
-                    android:text="@string/collect_option2_text"
+                    android:text="@string/collect_option1_text"
                     android:textColor="#fff"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="@+id/cardviewoption1"
@@ -282,7 +283,7 @@
                     android:layout_height="93dp"
                     android:layout_marginTop="116dp"
                     android:background="@android:color/transparent"
-                    android:contentDescription="@string/home_option_text"
+                    android:contentDescription="telefone"
                     android:scaleType="fitCenter"
                     app:layout_constraintEnd_toEndOf="@+id/white_view"
                     app:layout_constraintHorizontal_bias="0.084"
@@ -294,16 +295,15 @@
                     android:id="@+id/imageViewOption2"
                     android:layout_width="116dp"
                     android:layout_height="109dp"
-                    android:layout_marginTop="84dp"
+                    android:layout_marginTop="100dp"
                     android:background="@android:color/transparent"
-                    android:contentDescription="@string/home_option_text"
-
+                    android:contentDescription="caminhão de lixo"
                     android:scaleType="fitCenter"
                     app:layout_constraintEnd_toEndOf="@+id/white_view"
                     app:layout_constraintHorizontal_bias="0.495"
                     app:layout_constraintStart_toEndOf="@+id/imageViewOption1"
                     app:layout_constraintTop_toTopOf="@+id/white_view"
-                    app:srcCompat="@drawable/mapa_icon" />
+                    app:srcCompat="@drawable/caminhao_lixo" />
 
                 <TextView
                     android:id="@+id/textViewMenu1"
@@ -311,7 +311,7 @@
                     android:layout_height="64dp"
                     android:layout_marginBottom="91dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="@string/collect_option2_menu1"
+                    android:text="@string/collect_option1_menu1"
                     android:textAllCaps="true"
                     android:textColor="#000"
                     android:textSize="12sp"
@@ -327,16 +327,16 @@
                     android:layout_width="147dp"
                     android:layout_height="72dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="@string/collect_option2_menu2"
+                    android:text="@string/collect_option1_menu2"
                     android:textAllCaps="true"
                     android:textColor="#000"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toTopOf="@+id/imageView"
                     app:layout_constraintEnd_toEndOf="@+id/white_view"
-                    app:layout_constraintHorizontal_bias="0.519"
+                    app:layout_constraintHorizontal_bias="0.459"
                     app:layout_constraintStart_toEndOf="@+id/textViewMenu1"
                     app:layout_constraintTop_toBottomOf="@+id/imageViewOption2"
-                    app:layout_constraintVertical_bias="0.131" />
+                    app:layout_constraintVertical_bias="0.084" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

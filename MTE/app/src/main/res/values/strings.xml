@@ -38,5 +38,10 @@
     <string name="collect_option2_text">Para garantir um ambiente limpo e sustentável, sugiro que você encontre o ponto de coleta de lixo mais próximo!</string>
     <string name="collect_option2_menu1">fale com a gente por mensagem</string>
     <string name="collect_option2_menu2">encontre no mapa o local de coleta mais próximo</string>
+    <string name="collect_option1_text">você pode cuidar do ambiente da sua casa mesmo, basta optar pelo método da coleta residencial.</string>
+    <string name="collect_option1_text2">entrega de coleta sem sair de casa</string>
+    <string name="collect_option1_menu1">entre em contato com a gente</string>
+    <string name="collect_option1_menu2">solicitar a coleta residencial</string>
+
 
 </resources>
