@@ -32,4 +32,7 @@
     <string name="option_config3">BONUS (HISTÓRICO)</string>
     <string name="option_config4">COMPARTILHE O APP</string>
     <string name="option_config5">SOBRE NÓS</string>
+    <string name="collect_title">SOLICITAR COLETA</string>
+    <string name="collect_option1">COLETA RESIDÊNCIAL</string>
+    <string name="collect_option2">PONTO DE COLETA MAIS PRÓXIMO</string>
 </resources>

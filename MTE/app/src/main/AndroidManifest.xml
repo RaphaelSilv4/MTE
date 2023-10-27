@@ -13,6 +13,9 @@
         android:theme="@style/Theme.EuDescarto"
         tools:targetApi="31">
         <activity
+            android:name=".collect_screen"
+            android:exported="false" />
+        <activity
             android:name=".config_screen"
             android:exported="false" />
         <activity
