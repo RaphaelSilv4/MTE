@@ -4,15 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageButton;
 
-public class collect_screen extends AppCompatActivity {
+public class collect_next extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_collect_screen);
+        setContentView(R.layout.activity_collect_next);
 
         ImageButton myButton = findViewById(R.id.imageViewChevron);
         myButton.setBackgroundResource(R.drawable.button_selector);
@@ -23,26 +22,17 @@ public class collect_screen extends AppCompatActivity {
         ImageButton myButton3 = findViewById(R.id.imageView15);
         myButton.setBackgroundResource(R.drawable.button_selector);
 
-        Button myButton4 = findViewById(R.id.button3);
-        myButton.setBackgroundResource(R.drawable.button_selector);
-
         myButton.setOnClickListener(v -> {
-            Intent intent = new Intent(collect_screen.this, profile.class);
-            startActivity(intent);
+            finish();
         });
 
         myButton2.setOnClickListener(v -> {
-            Intent intent = new Intent(collect_screen.this, profile.class);
+            Intent intent = new Intent(collect_next.this, profile.class);
             startActivity(intent);
         });
 
         myButton3.setOnClickListener(v -> {
-            Intent intent = new Intent(collect_screen.this, config_screen.class);
-            startActivity(intent);
-        });
-
-        myButton4.setOnClickListener(v -> {
-            Intent intent = new Intent(collect_screen.this, collect_next.class);
+            Intent intent = new Intent(collect_next.this, config_screen.class);
             startActivity(intent);
         });
     }

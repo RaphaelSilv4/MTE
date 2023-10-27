@@ -35,4 +35,8 @@
     <string name="collect_title">SOLICITAR COLETA</string>
     <string name="collect_option1">COLETA RESIDÊNCIAL</string>
     <string name="collect_option2">PONTO DE COLETA MAIS PRÓXIMO</string>
+    <string name="collect_option2_text">Para garantir um ambiente limpo e sustentável, sugiro que você encontre o ponto de coleta de lixo mais próximo!</string>
+    <string name="collect_option2_menu1">fale com a gente por mensagem</string>
+    <string name="collect_option2_menu2">encontre no mapa o local de coleta mais próximo</string>
+
 </resources>
