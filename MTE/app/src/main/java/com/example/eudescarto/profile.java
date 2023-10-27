@@ -16,6 +16,9 @@ public class profile extends AppCompatActivity {
         ImageButton myButton = findViewById(R.id.imageView3);
         myButton.setBackgroundResource(R.drawable.button_selector);
 
+        ImageButton myButton3 = findViewById(R.id.imageView4);
+        myButton.setBackgroundResource(R.drawable.button_selector);
+
         ImageButton myButton2 = findViewById(R.id.imageView15);
         myButton.setBackgroundResource(R.drawable.button_selector);
 
@@ -26,6 +29,11 @@ public class profile extends AppCompatActivity {
 
         myButton2.setOnClickListener(v -> {
             Intent intent = new Intent(profile.this, config_screen.class);
+            startActivity(intent);
+        });
+
+        myButton3.setOnClickListener(v -> {
+            Intent intent = new Intent(profile.this, collect_screen.class);
             startActivity(intent);
         });
     }

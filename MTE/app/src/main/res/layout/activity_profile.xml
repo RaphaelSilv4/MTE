@@ -418,11 +418,12 @@
                 app:layout_constraintTop_toTopOf="@+id/cardview6"
                 app:srcCompat="@drawable/presente" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView4"
                 android:layout_width="93dp"
                 android:layout_height="57dp"
                 android:layout_marginEnd="-5dp"
+                android:background="@android:color/transparent"
                 app:layout_constraintBottom_toBottomOf="@+id/cardview7"
                 app:layout_constraintEnd_toEndOf="@+id/cardview7"
                 app:layout_constraintTop_toTopOf="@+id/cardview7"
