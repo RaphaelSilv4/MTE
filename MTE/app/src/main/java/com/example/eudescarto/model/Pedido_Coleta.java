@@ -1,40 +1,30 @@
-package com.mte2023.spring_mte.entities;
+package com.example.eudescarto.model;
+
+import com.example.eudescarto.model.enums.Pedido_ColetaStatus;
 
 import java.io.Serializable;
 import java.time.Instant;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.mte2023.spring_mte.entities.enums.Pedido_ColetaStatus;
 
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "tb_pedido_coleta")
+
+
+
 public class Pedido_Coleta implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
+
     private Instant moment;
 
     private Integer pedido_ColetaStatus; /* Tratamento Integer e interno a classe Pedido_Coleta */
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
+
     private User user;
 
-    @OneToOne(mappedBy = "pedido_Coleta", cascade = CascadeType.ALL) /* No caso de 1 para 1 as duas entidades possuem o mesmo ID */
+
     private Payment payment;
     
     public Pedido_Coleta(){}

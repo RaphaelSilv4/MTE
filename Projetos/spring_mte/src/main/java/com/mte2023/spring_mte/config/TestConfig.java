@@ -1,4 +1,4 @@
-package com.mte2023.spring_mte.config;
+/*package com.mte2023.spring_mte.config;
 
 import java.time.Instant;
 import java.util.Arrays;
@@ -46,3 +46,5 @@ public class TestConfig implements CommandLineRunner {
     }
 
 }
+
+ */

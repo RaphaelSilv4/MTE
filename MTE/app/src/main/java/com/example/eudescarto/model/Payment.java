@@ -1,32 +1,20 @@
-/*package com.mte2023.spring_mte.entities;
+package com.example.eudescarto.model;
 
 import java.io.Serializable;
 import java.time.Instant;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.MapsId;
-import jakarta.persistence.OneToOne; 
-import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "tb_payment")
 public class Payment implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
+
     private Instant moment;
 
-    @OneToOne
-    @MapsId
+
     private Pedido_Coleta pedido_Coleta;
 
     public Payment(){}
@@ -88,4 +76,3 @@ public class Payment implements Serializable {
     }
 
 }
-*/

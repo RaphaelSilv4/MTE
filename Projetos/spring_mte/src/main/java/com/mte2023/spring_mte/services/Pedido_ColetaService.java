@@ -1,4 +1,4 @@
-package com.mte2023.spring_mte.services;
+/*package com.mte2023.spring_mte.services;
 
 import java.util.List;
 import java.util.Optional;
@@ -24,3 +24,4 @@ public class Pedido_ColetaService {
         return obj.get();
     }
 }
+*/

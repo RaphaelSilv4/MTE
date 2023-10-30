@@ -1,4 +1,4 @@
-package com.mte2023.spring_mte.resources;
+/*package com.mte2023.spring_mte.resources;
 
 import java.net.URI;
 import java.util.List;
@@ -52,3 +52,4 @@ public class AddressResource {
         return ResponseEntity.ok().body(obj);
     }
 }
+*/

@@ -1,4 +1,4 @@
-package com.mte2023.spring_mte.resources;
+/*package com.mte2023.spring_mte.resources;
 
 import java.util.List;
 
@@ -31,3 +31,4 @@ public class Pedido_ColetaResource {
         return ResponseEntity.ok().body(obj);
     }
 }
+*/

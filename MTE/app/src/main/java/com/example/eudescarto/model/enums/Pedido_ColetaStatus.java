@@ -1,4 +1,4 @@
-package com.mte2023.spring_mte.entities.enums;
+package com.example.eudescarto.model.enums;
 
 public enum Pedido_ColetaStatus {
     
