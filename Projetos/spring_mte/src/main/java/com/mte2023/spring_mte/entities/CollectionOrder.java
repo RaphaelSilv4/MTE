@@ -29,8 +29,9 @@ public class CollectionOrder implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
     @Column(name = "moment")
     private Instant moment;
-    @Column(name = "order_status")
-    private Integer orderStatus; /* Tratamento Integer e interno a classe Pedido_Coleta */
+
+    //@Column(name = "order_status")
+    //private Integer orderStatus; /* Tratamento Integer e interno a classe Pedido_Coleta */
 
     @Column(name = "description")
     private String description;
@@ -71,16 +72,17 @@ public class CollectionOrder implements Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+/*
+    public CollectionOrder getCollectionOrder() {
+        return Pedido_ColetaStatus.valueOf(pedido_ColetaStatus);
+    }
 
-    //public CollectionOrder getCollectionOrder() {
-    //    return Pedido_ColetaStatus.valueOf(pedido_ColetaStatus);
-    //}
-
-    //public void setPedido_ColetaStatus(Pedido_ColetaStatus pedido_ColetaStatus) {
-    //    if(pedido_ColetaStatus != null){
-    //        this.pedido_ColetaStatus = pedido_ColetaStatus.getCode();
-    //    }
-    //}
+    public void setPedido_ColetaStatus(Pedido_ColetaStatus pedido_ColetaStatus) {
+        if(pedido_ColetaStatus != null){
+            this.pedido_ColetaStatus = pedido_ColetaStatus.getCode();
+        }
+    }
+ */
     public Integer getUserID(){
         return userID;
     }
@@ -155,10 +157,12 @@ public class CollectionOrder implements Serializable {
             collectionOrder.description = description;
             return this;
         }
+        /*
         public Builder withOrderStatus(OrderStatus orderStatus){
             collectionOrder.orderStatus = orderStatus;
             return this;
         }
+        */
         public Builder withUserID(Integer userID){
             collectionOrder.userID = userID;
             return this;
@@ -177,7 +181,6 @@ public class CollectionOrder implements Serializable {
         return "CollectionOrder{" +
                 "id=" + id +
                 ", moment=" + moment +
-                ", orderStatus=" + orderStatus +
                 ", description='" + description + '\'' +
                 ", userID=" + userID +
                 ", userId=" + userId +

@@ -1,16 +1,16 @@
-/*package com.mte2023.spring_mte.entities.enums;
+package com.mte2023.spring_mte.entities.enums;
 
-public enum Pedido_ColetaStatus {
+public enum OrderStatus {
 
-    WAITING_PAYMENT(0),    /* no banco o status fica = 0
-    PAID(1),               /* no banco o status fica = 1
-    SHIPPED(2),            /* no banco o status fica = 2
-    DELIVERED(3),          /* no banco o status fica = 3
-    CANCELED(4);           /* no banco o status fica = 4
+    WAITING_PAYMENT(0),    // no banco o status fica = 0
+    PAID(1),               // no banco o status fica = 1
+    SHIPPED(2),            // no banco o status fica = 2
+    DELIVERED(3),          // no banco o status fica = 3
+    CANCELED(4);           // no banco o status fica = 4
 
     private int code;
 
-    private Pedido_ColetaStatus(int code){
+    private OrderStatus(int code){
         this.code = code;
     }
 
@@ -18,8 +18,8 @@ public enum Pedido_ColetaStatus {
         return code;
     }
 
-    public static Pedido_ColetaStatus valueOf(int code){
-        for(Pedido_ColetaStatus value : Pedido_ColetaStatus.values()) {
+    public static OrderStatus valueOf(int code){
+        for(OrderStatus value : OrderStatus.values()) {
             if (value.getCode() == code){
                 return value;
             }
@@ -28,4 +28,3 @@ public enum Pedido_ColetaStatus {
     }
 }
 
- */
