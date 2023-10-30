@@ -53,6 +53,7 @@ public class UserResource {
     @PostMapping
     public ResponseEntity<?> createUser(@RequestBody User user){
         if(user != null){
+            userService.validate(user);
             userService.saveAndFlush(user);
             return new ResponseEntity<>("Usuário criado com sucesso.", HttpStatus.CREATED);
         }
