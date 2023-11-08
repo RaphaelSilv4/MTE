@@ -14,18 +14,18 @@ public class sign_up extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        Button meuBotao = findViewById(R.id.button2);
-        meuBotao.setBackgroundResource(R.drawable.button_selector);
+        Button buttonLoginAccount = findViewById(R.id.buttonLoginAccount);
+        buttonLoginAccount.setBackgroundResource(R.drawable.button_selector);
 
-        meuBotao.setOnClickListener(v -> {
+        buttonLoginAccount.setOnClickListener(v -> {
             Intent intent = new Intent(sign_up.this, MainActivity.class);
             startActivity(intent);
         });
 
-        Button button_home = findViewById(R.id.button);
-        button_home.setBackgroundResource(R.drawable.button_selector);
+        Button buttonNewAccount = findViewById(R.id.buttonNewAccount);
+        buttonNewAccount.setBackgroundResource(R.drawable.button_selector);
 
-        button_home.setOnClickListener(v -> {
+        buttonNewAccount.setOnClickListener(v -> {
             Intent intent = new Intent(sign_up.this, profile.class);
             startActivity(intent);
         });

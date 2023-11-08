@@ -13,26 +13,26 @@ public class profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        ImageButton myButton = findViewById(R.id.imageView3);
-        myButton.setBackgroundResource(R.drawable.button_selector);
+        ImageButton imageViewInput1 = findViewById(R.id.imageViewInput1);
+        imageViewInput1.setBackgroundResource(R.drawable.button_selector);
 
-        ImageButton myButton3 = findViewById(R.id.imageView4);
-        myButton.setBackgroundResource(R.drawable.button_selector);
+        ImageButton imageViewInput2 = findViewById(R.id.imageViewInput2);
+        imageViewInput2.setBackgroundResource(R.drawable.button_selector);
 
-        ImageButton myButton2 = findViewById(R.id.imageView15);
-        myButton.setBackgroundResource(R.drawable.button_selector);
+        ImageButton imageViewInputConfig = findViewById(R.id.imageViewInputConfig);
+        imageViewInputConfig.setBackgroundResource(R.drawable.button_selector);
 
-        myButton.setOnClickListener(v -> {
+        imageViewInput1.setOnClickListener(v -> {
             Intent intent = new Intent(profile.this, bonus_screen.class);
             startActivity(intent);
         });
 
-        myButton2.setOnClickListener(v -> {
+        imageViewInputConfig.setOnClickListener(v -> {
             Intent intent = new Intent(profile.this, config_screen.class);
             startActivity(intent);
         });
 
-        myButton3.setOnClickListener(v -> {
+        imageViewInput2.setOnClickListener(v -> {
             Intent intent = new Intent(profile.this, collect_screen.class);
             startActivity(intent);
         });

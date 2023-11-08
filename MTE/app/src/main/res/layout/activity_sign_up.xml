@@ -23,7 +23,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/title"
         android:layout_width="353dp"
         android:layout_height="71dp"
         android:fontFamily="@font/nunito_sans_semibold"
@@ -35,7 +35,7 @@
         android:textColor="#FFF"
         android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/black_view"
+        app:layout_constraintBottom_toTopOf="@+id/white_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -43,7 +43,7 @@
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/subtitle"
         android:layout_width="303dp"
         android:layout_height="56dp"
         android:layout_marginTop="-8dp"
@@ -59,19 +59,21 @@
         app:layout_constraintVertical_bias="0.071" />
 
     <View
-        android:id="@+id/with_view"
+        android:id="@+id/black_view"
         android:layout_width="315dp"
         android:layout_height="612dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/rounded_rectangle2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.651"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/black_view"
+        app:layout_constraintTop_toTopOf="@+id/white_view"
         app:layout_constraintVertical_bias="0.068" />
 
     <View
-        android:id="@+id/black_view"
+        android:id="@+id/white_view"
         android:layout_width="343dp"
         android:layout_height="605dp"
         android:layout_marginBottom="-100dp"
@@ -84,18 +86,18 @@
         app:layout_constraintVertical_bias="0.312" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewInput1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/name_sing_up"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardview"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toTopOf="@+id/cardviewInput1"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.113"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toTopOf="@+id/with_view"
+        app:layout_constraintStart_toStartOf="@+id/white_view"
+        app:layout_constraintTop_toTopOf="@+id/black_view"
         app:layout_constraintVertical_bias="0.846" />
 
     <TextView
@@ -107,31 +109,31 @@
         android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/cep_sing_up"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardview3"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toTopOf="@+id/cardviewInput3"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.115"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toBottomOf="@+id/cardview2" />
+        app:layout_constraintStart_toStartOf="@+id/white_view"
+        app:layout_constraintTop_toBottomOf="@+id/cardviewInput2" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview"
+        android:id="@+id/cardviewInput1"
         android:layout_width="275dp"
         android:layout_height="33dp"
         android:layout_marginBottom="10dp"
         app:cardBackgroundColor="#60A6A6A6"
         app:cardElevation="0dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toTopOf="@+id/textViewInput2"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.553"
-        app:layout_constraintStart_toStartOf="@+id/black_view">
+        app:layout_constraintStart_toStartOf="@+id/white_view">
 
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText2"
+        android:id="@+id/textInputName"
         android:layout_width="241dp"
-        android:layout_height="34dp"
+        android:layout_height="50dp"
         android:background="#00000000"
         android:fontFamily="@font/nunito_sans_semibold"
         android:hint="@string/placeholder_name_sing_up"
@@ -139,39 +141,39 @@
         android:textColorHint="#A6A6A6"
         android:textColor="#211D1D"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardview"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toTopOf="@+id/cardview" />
+        app:layout_constraintBottom_toBottomOf="@+id/cardviewInput1"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
+        app:layout_constraintStart_toStartOf="@+id/white_view"
+        app:layout_constraintTop_toTopOf="@+id/cardviewInput1" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewInput2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/cpf_sing_up"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardview2"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toTopOf="@+id/cardviewInput2"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.088"
-        app:layout_constraintStart_toStartOf="@+id/black_view" />
+        app:layout_constraintStart_toStartOf="@+id/white_view" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview2"
+        android:id="@+id/cardviewInput2"
         android:layout_width="275dp"
         android:layout_height="33dp"
         android:layout_marginBottom="460dp"
         app:cardBackgroundColor="#60A6A6A6"
         app:cardElevation="0dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/black_view"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toBottomOf="@+id/white_view"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="@+id/black_view" />
+        app:layout_constraintStart_toStartOf="@+id/white_view" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
+        android:id="@+id/textInputcpf"
         android:layout_width="234dp"
         android:layout_height="56dp"
         android:background="#00000000"
@@ -181,13 +183,13 @@
         android:textColorHint="#A6A6A6"
         android:textColor="#211D1D"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardview2"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toTopOf="@+id/cardview2" />
+        app:layout_constraintBottom_toBottomOf="@+id/cardviewInput2"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
+        app:layout_constraintStart_toStartOf="@+id/white_view"
+        app:layout_constraintTop_toTopOf="@+id/cardviewInput2" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/buttonNewAccount"
         android:layout_width="259dp"
         android:layout_height="66dp"
         android:background="@drawable/botao_customizado_sing_up"
@@ -199,11 +201,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/with_view"
+        app:layout_constraintTop_toBottomOf="@+id/black_view"
         app:layout_constraintVertical_bias="0.275" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewLoginAccount"
         android:layout_width="265dp"
         android:layout_height="47dp"
         android:fontFamily="@font/nunito_sans_semibold"
@@ -211,15 +213,15 @@
         android:text="@string/call_registration_sing_up"
         android:textColor="#A6A6A6"
         android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/black_view"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toBottomOf="@+id/white_view"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toBottomOf="@+id/cardview7"
+        app:layout_constraintStart_toStartOf="@+id/white_view"
+        app:layout_constraintTop_toBottomOf="@+id/cardviewInput7"
         app:layout_constraintVertical_bias="0.259" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textViewLoginAccount2"
         android:layout_width="157dp"
         android:layout_height="39dp"
         android:fontFamily="@font/nunito_sans_semibold"
@@ -229,33 +231,33 @@
         android:textColor="#A6A6A6"
         android:textColorLink="#737373"
         android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/black_view"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toBottomOf="@+id/white_view"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.661"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toBottomOf="@+id/cardview7"
+        app:layout_constraintStart_toStartOf="@+id/white_view"
+        app:layout_constraintTop_toBottomOf="@+id/cardviewInput7"
         app:layout_constraintVertical_bias="0.693" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview3"
+        android:id="@+id/cardviewInput3"
         android:layout_width="275dp"
         android:layout_height="33dp"
         android:layout_marginBottom="8dp"
         app:cardBackgroundColor="#60A6A6A6"
         app:cardElevation="0dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toTopOf="@+id/textViewInput4"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="@+id/black_view">
+        app:layout_constraintStart_toStartOf="@+id/white_view">
 
 
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText4"
+        android:id="@+id/textInputcep"
         android:layout_width="241dp"
-        android:layout_height="34dp"
+        android:layout_height="50dp"
         android:background="#00000000"
         android:fontFamily="@font/nunito_sans_semibold"
         android:hint="@string/placeholder_cep_sing_up"
@@ -263,44 +265,44 @@
         android:textColorHint="#A6A6A6"
         android:textColor="#211D1D"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardview3"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toTopOf="@+id/cardview3" />
+        app:layout_constraintBottom_toBottomOf="@+id/cardviewInput3"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
+        app:layout_constraintStart_toStartOf="@+id/white_view"
+        app:layout_constraintTop_toTopOf="@+id/cardviewInput3" />
 
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textViewInput4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/email_sing_up"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardview4"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toTopOf="@+id/cardviewInput4"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.092"
-        app:layout_constraintStart_toStartOf="@+id/black_view" />
+        app:layout_constraintStart_toStartOf="@+id/white_view" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview4"
+        android:id="@+id/cardviewInput4"
         android:layout_width="275dp"
         android:layout_height="33dp"
         android:layout_marginBottom="8dp"
         app:cardBackgroundColor="#60A6A6A6"
         app:cardElevation="0dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toTopOf="@+id/textViewInput5"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="@+id/black_view">
+        app:layout_constraintStart_toStartOf="@+id/white_view">
 
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText5"
+        android:id="@+id/textInputemail"
         android:layout_width="241dp"
-        android:layout_height="34dp"
+        android:layout_height="50dp"
         android:background="#00000000"
         android:fontFamily="@font/nunito_sans_semibold"
         android:hint="@string/placeholder_email_sing_up"
@@ -308,71 +310,72 @@
         android:textColorHint="#A6A6A6"
         android:textColor="#211D1D"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardview4"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toBottomOf="@+id/cardviewInput4"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toTopOf="@+id/cardview4" />
+        app:layout_constraintStart_toStartOf="@+id/white_view"
+        app:layout_constraintTop_toTopOf="@+id/cardviewInput4" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textViewInput5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/phone_sing_up"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardview5"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toTopOf="@+id/cardviewInput5"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.097"
-        app:layout_constraintStart_toStartOf="@+id/black_view" />
+        app:layout_constraintStart_toStartOf="@+id/white_view" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview5"
+        android:id="@+id/cardviewInput5"
         android:layout_width="275dp"
         android:layout_height="33dp"
         android:layout_marginBottom="10dp"
         app:cardBackgroundColor="#60A6A6A6"
         app:cardElevation="0dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toTopOf="@+id/textViewInput6"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="@+id/black_view">
+        app:layout_constraintStart_toStartOf="@+id/white_view">
 
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText6"
+        android:id="@+id/textInputPhone"
         android:layout_width="241dp"
-        android:layout_height="34dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="-10dp"
         android:background="#00000000"
         android:fontFamily="@font/nunito_sans_semibold"
         android:hint="@string/placeholder_phone_sing_up"
         android:inputType="number"
-        android:textColorHint="#A6A6A6"
         android:textColor="#211D1D"
+        android:textColorHint="#A6A6A6"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardview5"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toBottomOf="@+id/cardviewInput5"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.465"
-        app:layout_constraintStart_toStartOf="@+id/black_view" />
+        app:layout_constraintStart_toStartOf="@+id/white_view" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textViewInput6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="373dp"
         android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/password_sing_up"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.09"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toTopOf="@+id/black_view" />
+        app:layout_constraintStart_toStartOf="@+id/white_view"
+        app:layout_constraintTop_toTopOf="@+id/white_view" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview6"
+        android:id="@+id/cardviewInput6"
         android:layout_width="275dp"
         android:layout_height="33dp"
         android:layout_marginTop="10dp"
@@ -380,86 +383,88 @@
         app:cardBackgroundColor="#60A6A6A6"
         app:cardElevation="0dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toTopOf="@+id/textViewInput7"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
+        app:layout_constraintStart_toStartOf="@+id/white_view"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInput6">
 
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText7"
+        android:id="@+id/textInputPassword"
         android:layout_width="241dp"
-        android:layout_height="34dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-10dp"
         android:background="#00000000"
         android:fontFamily="@font/nunito_sans_semibold"
         android:hint="@string/placeholder_password_sing_up"
         android:inputType="textPassword"
-        android:textColorHint="#A6A6A6"
         android:textColor="#211D1D"
+        android:textColorHint="#A6A6A6"
         android:textSize="11sp"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toTopOf="@+id/cardview6" />
+        app:layout_constraintStart_toStartOf="@+id/white_view"
+        app:layout_constraintTop_toTopOf="@+id/cardviewInput6" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textViewInput7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/password_sing_up2"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.122"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText7" />
+        app:layout_constraintStart_toStartOf="@+id/white_view"
+        app:layout_constraintTop_toBottomOf="@+id/textInputPassword" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview7"
+        android:id="@+id/cardviewInput7"
         android:layout_width="275dp"
         android:layout_height="33dp"
         android:layout_marginTop="10dp"
         app:cardBackgroundColor="#60A6A6A6"
         app:cardElevation="0dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="@+id/black_view"
-        app:layout_constraintTop_toBottomOf="@+id/textView10">
+        app:layout_constraintStart_toStartOf="@+id/white_view"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInput7">
 
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText8"
+        android:id="@+id/textInputPassword2"
         android:layout_width="241dp"
-        android:layout_height="34dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="-10dp"
         android:background="#00000000"
         android:fontFamily="@font/nunito_sans_semibold"
         android:hint="@string/placeholder_password_sing_up"
         android:inputType="textPassword"
-        android:textColorHint="#A6A6A6"
         android:textColor="#211D1D"
+        android:textColorHint="#A6A6A6"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardview7"
-        app:layout_constraintEnd_toEndOf="@+id/black_view"
+        app:layout_constraintBottom_toBottomOf="@+id/cardviewInput7"
+        app:layout_constraintEnd_toEndOf="@+id/white_view"
         app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="@+id/black_view" />
+        app:layout_constraintStart_toStartOf="@+id/white_view" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button2"
+        android:id="@+id/buttonLoginAccount"
         android:layout_width="73dp"
-        android:layout_height="38dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="-20dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="13dp"
         android:background="@drawable/button_selector"
         android:text="@string/call_registration_sing_up2"
         android:textAllCaps="false"
         android:textColor="#737373"
-        app:layout_constraintBottom_toBottomOf="@+id/black_view"
-        app:layout_constraintEnd_toStartOf="@+id/textView11"
+        app:layout_constraintBottom_toBottomOf="@+id/white_view"
+        app:layout_constraintEnd_toStartOf="@+id/textViewLoginAccount2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 

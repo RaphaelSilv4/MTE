@@ -22,7 +22,7 @@
             tools:context=".profile">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/LogoView"
                 android:layout_width="198dp"
                 android:layout_height="86dp"
                 android:layout_marginBottom="18dp"
@@ -34,7 +34,7 @@
                 app:srcCompat="@drawable/logo_mte" />
 
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/textViewNameAccount"
                 android:layout_width="210dp"
                 android:layout_height="24dp"
                 android:layout_marginStart="60dp"
@@ -48,7 +48,7 @@
                 app:layout_constraintTop_toTopOf="@+id/cardview" />
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/textViewNiknameAccount"
                 android:layout_width="210dp"
                 android:layout_height="24dp"
                 android:layout_marginStart="60dp"
@@ -61,11 +61,11 @@
                 app:layout_constraintBottom_toBottomOf="@+id/cardview"
                 app:layout_constraintEnd_toEndOf="@+id/cardview"
                 app:layout_constraintStart_toStartOf="@+id/cardview"
-                app:layout_constraintTop_toBottomOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNameAccount"
                 app:layout_constraintVertical_bias="0.551" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/textViewCachback"
                 android:layout_width="98dp"
                 android:layout_height="34dp"
                 android:layout_marginStart="8dp"
@@ -80,10 +80,10 @@
                 app:layout_constraintVertical_bias="0.151" />
 
             <TextView
-                android:id="@+id/textView22"
+                android:id="@+id/textViewCachbackAccount"
                 android:layout_width="50dp"
                 android:layout_height="15dp"
-                android:layout_marginStart="-50dp"
+                android:layout_marginStart="-10dp"
                 android:layout_marginTop="-30dp"
                 android:fontFamily="@font/nunito_sans_semibold"
                 android:text="@string/cashback"
@@ -91,11 +91,13 @@
                 android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="@+id/cardview2"
                 app:layout_constraintEnd_toEndOf="@+id/cardview2"
-                app:layout_constraintStart_toStartOf="@+id/textView21"
-                app:layout_constraintTop_toBottomOf="@+id/textView21" />
+                app:layout_constraintHorizontal_bias="0.091"
+                app:layout_constraintStart_toStartOf="@+id/textViewCachback"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCachback"
+                app:layout_constraintVertical_bias="0.463" />
 
             <TextView
-                android:id="@+id/textView23"
+                android:id="@+id/textViewMoneyAccount"
                 android:layout_width="98dp"
                 android:layout_height="34dp"
                 android:layout_marginStart="5dp"
@@ -110,7 +112,7 @@
                 app:layout_constraintTop_toTopOf="@+id/cardview3" />
 
             <TextView
-                android:id="@+id/textView24"
+                android:id="@+id/textViewMoneyAccountInput"
                 android:layout_width="50dp"
                 android:layout_height="15dp"
                 android:layout_marginStart="-50dp"
@@ -120,9 +122,9 @@
                 android:textColor="#000"
                 android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="@+id/cardview3"
-                app:layout_constraintEnd_toEndOf="@+id/textView23"
-                app:layout_constraintStart_toStartOf="@+id/textView23"
-                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+                app:layout_constraintEnd_toEndOf="@+id/textViewMoneyAccount"
+                app:layout_constraintStart_toStartOf="@+id/textViewMoneyAccount"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMoneyAccount" />
 
             <View
                 android:id="@+id/black_view"
@@ -187,13 +189,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/cardview" />
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardview5"
+                android:id="@+id/cardviewInputSearch"
                 android:layout_width="292dp"
                 android:layout_height="61dp"
                 app:cardBackgroundColor="#49964A"
                 app:cardCornerRadius="30dp"
                 app:cardElevation="0dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintBottom_toBottomOf="@+id/LogoView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
@@ -211,7 +213,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/white_view"
                 app:layout_constraintHorizontal_bias="0.077"
                 app:layout_constraintStart_toStartOf="@+id/white_view"
-                app:layout_constraintTop_toBottomOf="@+id/cardview5" />
+                app:layout_constraintTop_toBottomOf="@+id/cardviewInputSearch" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardview7"
@@ -224,7 +226,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/white_view"
                 app:layout_constraintHorizontal_bias="0.133"
                 app:layout_constraintStart_toEndOf="@+id/cardview6"
-                app:layout_constraintTop_toBottomOf="@+id/cardview5" />
+                app:layout_constraintTop_toBottomOf="@+id/cardviewInputSearch" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardview8"
@@ -237,7 +239,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/white_view"
                 app:layout_constraintHorizontal_bias="0.473"
                 app:layout_constraintStart_toEndOf="@+id/cardview7"
-                app:layout_constraintTop_toBottomOf="@+id/cardview5" />
+                app:layout_constraintTop_toBottomOf="@+id/cardviewInputSearch" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardview4"
@@ -260,7 +262,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/white_view"
                 app:layout_constraintHorizontal_bias="0.077"
                 app:layout_constraintStart_toStartOf="@+id/white_view"
-                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewInput1" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardview10"
@@ -272,7 +274,7 @@
                 app:cardCornerRadius="15dp"
                 app:cardElevation="0dp"
                 app:layout_constraintStart_toEndOf="@+id/cardview9"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewInput2" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardview11"
@@ -284,7 +286,7 @@
                 app:cardCornerRadius="15dp"
                 app:cardElevation="0dp"
                 app:layout_constraintStart_toEndOf="@+id/cardview10"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewInput3" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_search"
@@ -298,14 +300,14 @@
                 android:textColor="#fff"
                 android:textColorHint="#fff"
                 android:textSize="13sp"
-                app:layout_constraintBottom_toBottomOf="@+id/cardview5"
-                app:layout_constraintEnd_toEndOf="@+id/cardview5"
-                app:layout_constraintStart_toStartOf="@+id/cardview5"
-                app:layout_constraintTop_toTopOf="@+id/cardview5" />
+                app:layout_constraintBottom_toBottomOf="@+id/cardviewInputSearch"
+                app:layout_constraintEnd_toEndOf="@+id/cardviewInputSearch"
+                app:layout_constraintStart_toStartOf="@+id/cardviewInputSearch"
+                app:layout_constraintTop_toTopOf="@+id/cardviewInputSearch" />
 
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/textViewInput1"
                 android:layout_width="75dp"
                 android:layout_height="16dp"
                 android:layout_marginTop="16dp"
@@ -319,7 +321,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/cardview6" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/textViewInput2"
                 android:layout_width="71dp"
                 android:layout_height="36dp"
                 android:layout_marginTop="8dp"
@@ -329,11 +331,11 @@
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="@+id/white_view"
                 app:layout_constraintHorizontal_bias="0.182"
-                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintStart_toEndOf="@+id/textViewInput1"
                 app:layout_constraintTop_toBottomOf="@+id/cardview7" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/textViewInput3"
                 android:layout_width="77dp"
                 android:layout_height="41dp"
                 android:layout_marginTop="8dp"
@@ -343,11 +345,11 @@
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="@+id/white_view"
                 app:layout_constraintHorizontal_bias="0.622"
-                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintStart_toEndOf="@+id/textViewInput2"
                 app:layout_constraintTop_toBottomOf="@+id/cardview8" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/textViewInput4"
                 android:layout_width="71dp"
                 android:layout_height="36dp"
                 android:layout_marginTop="12dp"
@@ -363,7 +365,7 @@
                 app:layout_constraintVertical_bias="0.037" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/textViewInput5"
                 android:layout_width="92dp"
                 android:layout_height="22dp"
                 android:layout_marginStart="20dp"
@@ -375,12 +377,12 @@
                 app:layout_constraintBottom_toBottomOf="@+id/white_view"
                 app:layout_constraintEnd_toEndOf="@+id/white_view"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/textView16"
+                app:layout_constraintStart_toEndOf="@+id/textViewInput4"
                 app:layout_constraintTop_toBottomOf="@+id/cardview10"
                 app:layout_constraintVertical_bias="0.937" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/textViewInput6"
                 android:layout_width="48dp"
                 android:layout_height="27dp"
                 android:layout_marginStart="20dp"
@@ -392,12 +394,12 @@
                 app:layout_constraintBottom_toBottomOf="@+id/white_view"
                 app:layout_constraintEnd_toEndOf="@+id/white_view"
                 app:layout_constraintHorizontal_bias="0.333"
-                app:layout_constraintStart_toEndOf="@+id/textView17"
+                app:layout_constraintStart_toEndOf="@+id/textViewInput5"
                 app:layout_constraintTop_toBottomOf="@+id/cardview11"
                 app:layout_constraintVertical_bias="1.0" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imageViewInput4"
                 android:layout_width="93dp"
                 android:layout_height="57dp"
                 android:layout_marginEnd="-5dp"
@@ -407,7 +409,7 @@
                 app:srcCompat="@drawable/lixo" />
 
             <ImageButton
-                android:id="@+id/imageView3"
+                android:id="@+id/imageViewInput1"
                 android:layout_width="93dp"
                 android:layout_height="57dp"
                 android:layout_marginEnd="-5dp"
@@ -419,7 +421,7 @@
                 app:srcCompat="@drawable/presente" />
 
             <ImageButton
-                android:id="@+id/imageView4"
+                android:id="@+id/imageViewInput2"
                 android:layout_width="93dp"
                 android:layout_height="57dp"
                 android:layout_marginEnd="-5dp"
@@ -430,7 +432,7 @@
                 app:srcCompat="@drawable/saco_lixo" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/imageViewInput3"
                 android:layout_width="93dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="-5dp"
@@ -441,7 +443,7 @@
                 app:srcCompat="@drawable/social" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/imageViewInput5"
                 android:layout_width="93dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="-5dp"
@@ -452,7 +454,7 @@
                 app:srcCompat="@drawable/estrela" />
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/imageViewInput6"
                 android:layout_width="93dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="-5dp"
@@ -463,7 +465,7 @@
                 app:srcCompat="@drawable/outros" />
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/imageViewLogoFooter"
                 android:layout_width="93dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="-5dp"
@@ -482,12 +484,12 @@
                 app:cardCornerRadius="100dp"
                 app:cardElevation="0dp"
                 app:layout_constraintBottom_toBottomOf="@+id/cardview"
-                app:layout_constraintEnd_toStartOf="@+id/textView19"
+                app:layout_constraintEnd_toStartOf="@+id/textViewNameAccount"
                 app:layout_constraintStart_toStartOf="@+id/cardview"
                 app:layout_constraintTop_toTopOf="@+id/cardview">
 
                 <ImageView
-                    android:id="@+id/imageView10"
+                    android:id="@+id/imageViewInputProfile"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="centerCrop"
@@ -496,19 +498,19 @@
             </androidx.cardview.widget.CardView>
 
             <ImageView
-                android:id="@+id/imageView11"
+                android:id="@+id/imageViewSearch"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="250dp"
                 android:layout_marginBottom="-5dp"
                 android:src="@drawable/search"
-                app:layout_constraintBottom_toBottomOf="@+id/cardview5"
-                app:layout_constraintEnd_toEndOf="@+id/cardview5"
-                app:layout_constraintStart_toStartOf="@+id/cardview5"
-                app:layout_constraintTop_toTopOf="@+id/cardview5" />
+                app:layout_constraintBottom_toBottomOf="@+id/cardviewInputSearch"
+                app:layout_constraintEnd_toEndOf="@+id/cardviewInputSearch"
+                app:layout_constraintStart_toStartOf="@+id/cardviewInputSearch"
+                app:layout_constraintTop_toTopOf="@+id/cardviewInputSearch" />
 
             <ImageButton
-                android:id="@+id/imageView12"
+                android:id="@+id/imageViewInputProfile2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
@@ -517,12 +519,12 @@
                 android:contentDescription="@string/navbar1_text"
                 android:scaleType="centerCrop"
                 android:src="@drawable/user_profile"
-                app:layout_constraintBottom_toTopOf="@+id/textView15"
+                app:layout_constraintBottom_toTopOf="@+id/textViewProfile2"
                 app:layout_constraintStart_toStartOf="@+id/cardview4"
                 app:layout_constraintTop_toTopOf="@+id/cardview4" />
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/textViewProfile2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -543,11 +545,11 @@
                 android:textColor="#fff"
                 android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="@+id/cardview4"
-                app:layout_constraintEnd_toStartOf="@+id/imageView8"
-                app:layout_constraintStart_toEndOf="@+id/textView15" />
+                app:layout_constraintEnd_toStartOf="@+id/imageViewLogoFooter"
+                app:layout_constraintStart_toEndOf="@+id/textViewProfile2" />
 
             <ImageView
-                android:id="@+id/imageView13"
+                android:id="@+id/imageViewInputHistory"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="5dp"
@@ -555,12 +557,12 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/delete"
                 app:layout_constraintBottom_toTopOf="@+id/textViewHistory"
-                app:layout_constraintEnd_toStartOf="@+id/imageView8"
-                app:layout_constraintStart_toEndOf="@+id/imageView12"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewLogoFooter"
+                app:layout_constraintStart_toEndOf="@+id/imageViewInputProfile2"
                 app:layout_constraintTop_toTopOf="@+id/cardview4" />
 
             <TextView
-                android:id="@+id/textViewmensagem"
+                android:id="@+id/textViewMessage"
                 android:layout_width="67dp"
                 android:layout_height="23dp"
                 android:layout_marginStart="10dp"
@@ -570,19 +572,19 @@
                 android:textColor="#fff"
                 android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="@+id/cardview4"
-                app:layout_constraintStart_toEndOf="@+id/imageView8" />
+                app:layout_constraintStart_toEndOf="@+id/imageViewLogoFooter" />
 
 
             <ImageView
-                android:id="@+id/imageView14"
+                android:id="@+id/imageViewInputMessage"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="-5dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/mail"
-                app:layout_constraintBottom_toTopOf="@+id/textViewmensagem"
-                app:layout_constraintStart_toEndOf="@+id/imageView8"
+                app:layout_constraintBottom_toTopOf="@+id/textViewMessage"
+                app:layout_constraintStart_toEndOf="@+id/imageViewLogoFooter"
                 app:layout_constraintTop_toTopOf="@+id/cardview4" />
 
             <TextView
@@ -597,10 +599,10 @@
                 android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="@+id/cardview4"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textViewmensagem" />
+                app:layout_constraintStart_toEndOf="@+id/textViewMessage" />
 
             <ImageButton
-                android:id="@+id/imageView15"
+                android:id="@+id/imageViewInputConfig"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="5dp"
@@ -611,7 +613,7 @@
                 android:contentDescription="@string/navbar2_text"
                 app:layout_constraintBottom_toTopOf="@+id/textViewconfig"
                 app:layout_constraintEnd_toEndOf="@+id/cardview4"
-                app:layout_constraintStart_toEndOf="@+id/imageView14"
+                app:layout_constraintStart_toEndOf="@+id/imageViewInputMessage"
                 app:layout_constraintTop_toTopOf="@+id/cardview4" />
 
 
