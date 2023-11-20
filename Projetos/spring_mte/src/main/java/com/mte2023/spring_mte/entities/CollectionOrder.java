@@ -10,8 +10,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.mte2023.spring_mte.entities.enums.OrderStatus;
-
 import jakarta.persistence.*;
 
 @Entity

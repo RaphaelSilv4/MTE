@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import com.mte2023.spring_mte.entities.CollectionOrder;
-import com.mte2023.spring_mte.entities.User;
 import com.mte2023.spring_mte.repositories.CollectionOrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
