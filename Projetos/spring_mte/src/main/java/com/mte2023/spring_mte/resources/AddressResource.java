@@ -1,4 +1,4 @@
-package com.mte2023.spring_mte.resources;
+/*package com.mte2023.spring_mte.resources;
 
 import java.net.URI;
 import java.util.List;
@@ -11,15 +11,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.mte2023.spring_mte.entities.Address;
 import com.mte2023.spring_mte.services.AddressService;
 
-@RestController
-@RequestMapping(value = "/address")
 public class AddressResource {
     @Autowired
     private AddressService service;
@@ -56,3 +52,4 @@ public class AddressResource {
         return ResponseEntity.ok().body(obj);
     }
 }
+*/

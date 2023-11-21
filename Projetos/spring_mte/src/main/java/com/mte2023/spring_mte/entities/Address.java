@@ -1,4 +1,4 @@
-package com.mte2023.spring_mte.entities;
+/*package com.mte2023.spring_mte.entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -127,3 +127,5 @@ public class Address implements Serializable{
         return true;
     }
 }
+
+ */

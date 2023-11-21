@@ -1,66 +1,58 @@
 package com.mte2023.spring_mte.entities;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tb_user")
+@Table(name = "users")
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String nome;
+    @Basic(optional = false)
+    @Column(name = "id")
+    private Integer id;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "email")
     private String email;
+    @Column(name = "phone")
     private String phone;
+    @Column(name = "password")
     private String password;
-
+/*
     @ManyToOne
     @JoinColumn(name = "address_id")
     private Address endereco;
-
+*/
     @JsonIgnore
-    @OneToMany(mappedBy = "user")
-    private List<CollectionOrder> collectionOrders = new ArrayList<>();
+    @OneToMany(mappedBy = "userId")
+    private List<CollectionOrder> collectionOrdersList;
 
     public User() {}
 
-    public User(Long id, String nome, String email, String phone, String password, Address endereco) {
-        this.id = id;
-        this.nome = nome;
-        this.email = email;
-        this.phone = phone;
-        this.password = password;
-        this.endereco = endereco;
-    }
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -86,7 +78,7 @@ public class User implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-
+/*
     public Address getEndereco() {
         return endereco;
     }
@@ -95,9 +87,49 @@ public class User implements Serializable {
         this.endereco = endereco;
     }
 
-    public List<CollectionOrder> getPedido_Coletas() {
-        return collectionOrders;
+    public List<Pedido_Coleta> getPedido_Coletas() {
+        return Pedido_Coletas;
     }
+*/
+public String toJson() {
+    try {
+        ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+        return ow.writeValueAsString(this);
+    } catch (JsonProcessingException e) {
+        throw new RuntimeException(e);
+    }
+}
+public static class Builder{
+    private User user;
+
+    public Builder(){
+        user = new User();
+    }
+    public Builder withId(Integer id){
+        user.id = id;
+        return this;
+    }
+    public  Builder withName(String name){
+        user.name = name;
+        return this;
+    }
+    public Builder withEmail(String email){
+        user.email = email;
+        return this;
+    }
+    public  Builder withPhone(String phone){
+        user.phone = phone;
+        return this;
+    }
+    public  Builder withPassword(String password){
+        user.password = password;
+        return this;
+    }
+    //TODO: builder para collectionOrder
+    public User build(){
+        return user;
+    }
+}
 
     @Override
     public int hashCode() {
@@ -124,4 +156,14 @@ public class User implements Serializable {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }
