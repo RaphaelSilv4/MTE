@@ -34,7 +34,7 @@ public class User implements Serializable {
 
     @JsonIgnore
     @OneToMany(mappedBy = "user")
-    private List<Pedido_Coleta> Pedido_Coletas = new ArrayList<>();
+    private List<CollectionOrder> collectionOrders = new ArrayList<>();
 
     public User() {}
 
@@ -95,8 +95,8 @@ public class User implements Serializable {
         this.endereco = endereco;
     }
 
-    public List<Pedido_Coleta> getPedido_Coletas() {
-        return Pedido_Coletas;
+    public List<CollectionOrder> getPedido_Coletas() {
+        return collectionOrders;
     }
 
     @Override
