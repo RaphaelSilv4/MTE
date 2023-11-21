@@ -24,15 +24,15 @@ public class Payment implements Serializable {
 
     @OneToOne
     @MapsId
-    private Pedido_Coleta pedido_Coleta;
+    private CollectionOrder collectionOrder;
 
     public Payment(){}
 
-    public Payment(Long id, Instant moment, Pedido_Coleta pedido_Coleta) {
+    public Payment(Long id, Instant moment, CollectionOrder collectionOrder) {
         super();
         this.id = id;
         this.moment = moment;
-        this.pedido_Coleta = pedido_Coleta;
+        this.collectionOrder = collectionOrder;
     }
     
     public Long getId() {
@@ -51,12 +51,12 @@ public class Payment implements Serializable {
         this.moment = moment;
     }
 
-    public Pedido_Coleta getPedido_Coleta() {
-        return pedido_Coleta;
+    public CollectionOrder getPedido_Coleta() {
+        return collectionOrder;
     }
 
-    public void setPedido_Coleta(Pedido_Coleta pedido_Coleta) {
-        this.pedido_Coleta = pedido_Coleta;
+    public void setPedido_Coleta(CollectionOrder collectionOrder) {
+        this.collectionOrder = collectionOrder;
     }
 
     @Override

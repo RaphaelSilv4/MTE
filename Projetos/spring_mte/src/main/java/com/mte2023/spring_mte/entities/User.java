@@ -30,7 +30,7 @@ public class User implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "address_id")
-    private Address endereco;
+    private Address address;
 
     @JsonIgnore
     @OneToMany(mappedBy = "user")
@@ -87,17 +87,65 @@ public class User implements Serializable {
         this.password = password;
     }
 
+<<<<<<< Updated upstream
     public Address getEndereco() {
         return endereco;
+=======
+    public Address getAddress() {
+        return address;
+>>>>>>> Stashed changes
     }
 
-    public void setEndereco(Address endereco) {
-        this.endereco = endereco;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
-    public List<Pedido_Coleta> getPedido_Coletas() {
-        return Pedido_Coletas;
+    public List<CollectionOrder> getCollectionOrder() {
+        return collectionOrdersList;
     }
+<<<<<<< Updated upstream
+=======
+
+public String toJson() {
+    try {
+        ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+        return ow.writeValueAsString(this);
+    } catch (JsonProcessingException e) {
+        throw new RuntimeException(e);
+    }
+}
+public static class Builder{
+    private User user;
+
+    public Builder(){
+        user = new User();
+    }
+    public Builder withId(Integer id){
+        user.id = id;
+        return this;
+    }
+    public  Builder withName(String name){
+        user.name = name;
+        return this;
+    }
+    public Builder withEmail(String email){
+        user.email = email;
+        return this;
+    }
+    public  Builder withPhone(String phone){
+        user.phone = phone;
+        return this;
+    }
+    public  Builder withPassword(String password){
+        user.password = password;
+        return this;
+    }
+    //TODO: builder para collectionOrder
+    public User build(){
+        return user;
+    }
+}
+>>>>>>> Stashed changes
 
     @Override
     public int hashCode() {
