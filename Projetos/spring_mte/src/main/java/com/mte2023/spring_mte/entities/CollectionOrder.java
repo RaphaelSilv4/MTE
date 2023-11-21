@@ -10,7 +10,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.mte2023.spring_mte.entities.enums.OrderStatus;
 
 import jakarta.persistence.*;
 
@@ -30,9 +29,6 @@ public class CollectionOrder implements Serializable {
     @Column(name = "moment")
     private Instant moment;
 
-    //@Column(name = "order_status")
-    //private Integer orderStatus; /* Tratamento Integer e interno a classe Pedido_Coleta */
-
     @Column(name = "description")
     private String description;
 
@@ -43,7 +39,6 @@ public class CollectionOrder implements Serializable {
     @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)
     @JsonIgnore
     private User userId;
-
 
  //   private Payment payment;
     public CollectionOrder(){}
@@ -72,17 +67,7 @@ public class CollectionOrder implements Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
-/*
-    public CollectionOrder getCollectionOrder() {
-        return Pedido_ColetaStatus.valueOf(pedido_ColetaStatus);
-    }
 
-    public void setPedido_ColetaStatus(Pedido_ColetaStatus pedido_ColetaStatus) {
-        if(pedido_ColetaStatus != null){
-            this.pedido_ColetaStatus = pedido_ColetaStatus.getCode();
-        }
-    }
- */
     public Integer getUserID(){
         return userID;
     }
@@ -95,7 +80,7 @@ public class CollectionOrder implements Serializable {
     public void setUserId(User userId) {
         this.userId = userId;
     }
-/*
+    /*
     public Payment getPayment() {
         return payment;
     }
@@ -157,12 +142,7 @@ public class CollectionOrder implements Serializable {
             collectionOrder.description = description;
             return this;
         }
-        /*
-        public Builder withOrderStatus(OrderStatus orderStatus){
-            collectionOrder.orderStatus = orderStatus;
-            return this;
-        }
-        */
+
         public Builder withUserID(Integer userID){
             collectionOrder.userID = userID;
             return this;

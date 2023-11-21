@@ -29,11 +29,13 @@ public class User implements Serializable {
     private String phone;
     @Column(name = "password")
     private String password;
-/*
-    @ManyToOne
-    @JoinColumn(name = "address_id")
-    private Address endereco;
-*/
+
+    //todo: status da coleta
+    /*
+        @ManyToOne
+        @JoinColumn(name = "address_id")
+        private Address endereco;
+    */
     @JsonIgnore
     @OneToMany(mappedBy = "userId")
     private List<CollectionOrder> collectionOrdersList;
@@ -87,11 +89,14 @@ public class User implements Serializable {
     public void setEndereco(Address endereco) {
         this.endereco = endereco;
     }
-
-    public List<Pedido_Coleta> getPedido_Coletas() {
-        return Pedido_Coletas;
-    }
 */
+    public List<CollectionOrder> getCollectionOrdersList() {
+        return collectionOrdersList;
+}
+ public void setCollectionOrdersList(List<CollectionOrder> collectionOrdersList) {
+        this.collectionOrdersList = collectionOrdersList;
+    }
+
 public String toJson() {
     try {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
@@ -126,7 +131,6 @@ public static class Builder{
         user.password = password;
         return this;
     }
-    //TODO: builder para collectionOrder
     public User build(){
         return user;
     }
@@ -157,14 +161,5 @@ public static class Builder{
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
+
 }

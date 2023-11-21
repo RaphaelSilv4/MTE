@@ -1,4 +1,4 @@
-/*package com.mte2023.spring_mte.entities;
+package com.mte2023.spring_mte.entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -6,28 +6,30 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tb_address")
+@Table(name = "address")
 public class Address implements Serializable{
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
+    @Basic
+    @Column(name = "id")
+    private Integer id;
+    @Column(name = "cep")
     private int cep;
-    private int numero_casa;
-    private String nome_rua;
-    private String nome_bairro;
-    private String cidade;
-    private String estado_federativo;
+    @Column(name = "house_number")
+    private int houseNumber;
+    @Column(name = "street")
+    private String street;
+    @Column(name = "district")
+    private String district;
+    @Column(name = "city")
+    private String city;
+    @Column(name = "state")
+    private String state;
 
     @JsonIgnore
     @OneToMany(mappedBy = "endereco")
@@ -35,71 +37,54 @@ public class Address implements Serializable{
 
     public Address() {}
 
-    public Address(Long id, int cep, int numero_casa, String nome_rua, String nome_bairro, String cidade,
-            String estado_federativo) {
-        this.id = id;
-        this.cep = cep;
-        this.numero_casa = numero_casa;
-        this.nome_rua = nome_rua;
-        this.nome_bairro = nome_bairro;
-        this.cidade = cidade;
-        this.estado_federativo = estado_federativo;
-    }
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public int getCep() {
         return cep;
+    }
+    public int getHouseNumber() {
+        return houseNumber;
+    }
+    public String getStreet() {
+        return street;
+    }
+    public String getDistrict() {
+        return district;
+    }
+    public String getState() {
+        return state;
+    }
+    public String getCity() {
+        return city;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public void setCep(int cep) {
         this.cep = cep;
     }
 
-    public int getNumero_casa() {
-        return numero_casa;
+    public void setHouseNumber(int houseNumber) {
+        this.houseNumber = houseNumber;
     }
 
-    public void setNumero_casa(int numero_casa) {
-        this.numero_casa = numero_casa;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
-    public String getNome_rua() {
-        return nome_rua;
+    public void setDistrict(String district) {
+        this.district = district;
     }
 
-    public void setNome_rua(String nome_rua) {
-        this.nome_rua = nome_rua;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getNome_bairro() {
-        return nome_bairro;
-    }
-
-    public void setNome_bairro(String nome_bairro) {
-        this.nome_bairro = nome_bairro;
-    }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-
-    public String getEstado_federativo() {
-        return estado_federativo;
-    }
-
-    public void setEstado_federativo(String estado_federativo) {
-        this.estado_federativo = estado_federativo;
+    public void setState(String state) {
+        this.state = state;
     }
 
     @Override
@@ -126,6 +111,8 @@ public class Address implements Serializable{
             return false;
         return true;
     }
-}
+    private static class Builder(){
+        private Address address;
 
- */
+    }
+}
