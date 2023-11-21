@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
+import ch.qos.logback.core.net.ObjectWriter;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -87,13 +89,8 @@ public class User implements Serializable {
         this.password = password;
     }
 
-<<<<<<< Updated upstream
-    public Address getEndereco() {
-        return endereco;
-=======
     public Address getAddress() {
         return address;
->>>>>>> Stashed changes
     }
 
     public void setAddress(Address address) {
@@ -103,8 +100,6 @@ public class User implements Serializable {
     public List<CollectionOrder> getCollectionOrder() {
         return collectionOrdersList;
     }
-<<<<<<< Updated upstream
-=======
 
 public String toJson() {
     try {
@@ -145,7 +140,6 @@ public static class Builder{
         return user;
     }
 }
->>>>>>> Stashed changes
 
     @Override
     public int hashCode() {
