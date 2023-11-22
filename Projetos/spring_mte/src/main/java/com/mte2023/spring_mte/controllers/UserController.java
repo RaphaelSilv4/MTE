@@ -1,4 +1,4 @@
-package com.mte2023.spring_mte.resources;
+package com.mte2023.spring_mte.controllers;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,16 +11,20 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.mte2023.spring_mte.entities.User;
 import com.mte2023.spring_mte.services.UserService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping(path = "/users", produces = "application/json;charset=UTF-8")
 @Tag(name = "user")
-public class UserResource {
+public class UserController {
     @Autowired
     UserService userService;
     @Operation(summary = "Busca todos os usuários na base de dados", method = "GET")
@@ -35,7 +39,7 @@ public class UserResource {
 
     @Operation(summary = "Busca um determinado usuário na base de dados a partir de seu identificador", method = "GET")
     @GetMapping(path = "/{id}")
-    public ResponseEntity<?> getUserById(@PathVariable Integer id){
+    public ResponseEntity<?> getUserById(@PathVariable Long id){
         Optional<User> user = userService.findById(id);
         if (user.isPresent()){
             return new ResponseEntity<>(user , HttpStatus.OK);
@@ -55,19 +59,17 @@ public class UserResource {
     }
     @Operation(summary = "Realiza a remoção de um determinado usuário na base de dados a partir do seu identificador", method = "DELETE")
     @DeleteMapping(path = "/{id}")
-    public ResponseEntity<?> deleteUserById(@PathVariable Integer id){
+    public ResponseEntity<?> deleteUserById(@PathVariable Long id){
         if (userService.findById(id).isPresent()){
             userService.delete(id);
             return new ResponseEntity<>("Usuário removido com sucesso.", HttpStatus.OK);
         }
         throw new BadRequestException("Erro ao deletar o usuário.", 400);
     }
-/*
+
     @PutMapping(path = "/{id}")
     public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User obj){
         obj = userService.update(id, obj);
         return ResponseEntity.ok().body(obj);
     }
-
-     */
 }

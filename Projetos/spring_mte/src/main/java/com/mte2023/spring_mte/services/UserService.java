@@ -21,7 +21,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public Optional<User> findById(Integer id){
+    public Optional<User> findById(Long id){
         return userRepository.findById(id);
     }
 
@@ -33,13 +33,12 @@ public class UserService {
 
     public void saveAll(List<User> userList) { userRepository.saveAll(userList);}
     //delete methods
-    public void delete(Integer id){
+    public void delete(Long id){
         userRepository.deleteById(id);
     }
     //flush methods
     public void flush(){ userRepository.flush();}
 
-    /*
     public User update(Long id, User obj){
         User entity = userRepository.getReferenceById(id);
         updateData(entity, obj);
@@ -54,7 +53,6 @@ public class UserService {
 
     }
 
-     */
     //Logic Methods
     public void validate(User user) {
 

@@ -21,7 +21,7 @@ public class CollectionOrderService {
         return collectionOrderRepository.findAll();
     }
 
-    public Optional<CollectionOrder> findById(Integer id){
+    public Optional<CollectionOrder> findById(Long id){
         return collectionOrderRepository.findById(id);
     }
 
@@ -33,7 +33,7 @@ public class CollectionOrderService {
 
     public void saveAll(List<CollectionOrder> collectionOrderList) { collectionOrderRepository.saveAll(collectionOrderList);}
     //delete methods
-    public void delete(Integer id){
+    public void delete(Long id){
         collectionOrderRepository.deleteById(id);
     }
     //flush methods

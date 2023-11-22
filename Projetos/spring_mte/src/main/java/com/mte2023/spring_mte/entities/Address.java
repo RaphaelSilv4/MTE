@@ -1,4 +1,4 @@
-/*package com.mte2023.spring_mte.entities;
+package com.mte2023.spring_mte.entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ public class Address implements Serializable{
     private String estado_federativo;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "endereco")
+    @OneToMany(mappedBy = "address")
     private List<User> users = new ArrayList<>();
 
     public Address() {}
@@ -127,5 +127,3 @@ public class Address implements Serializable{
         return true;
     }
 }
-
- */

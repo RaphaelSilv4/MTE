@@ -19,7 +19,7 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id")
-    private Integer id;
+    private Long id;
     @Column(name = "name")
     private String name;
     @Column(name = "email")
@@ -28,22 +28,22 @@ public class User implements Serializable {
     private String phone;
     @Column(name = "password")
     private String password;
-/*
+
     @ManyToOne
     @JoinColumn(name = "address_id")
-    private Address endereco;
-*/
+    private Address address;
+
     @JsonIgnore
     @OneToMany(mappedBy = "userId")
     private List<CollectionOrder> collectionOrdersList;
 
     public User() {}
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -78,19 +78,19 @@ public class User implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-/*
+
     public Address getEndereco() {
-        return endereco;
+        return address;
     }
 
-    public void setEndereco(Address endereco) {
-        this.endereco = endereco;
+    public void setEndereco(Address address) {
+        this.address = address;
     }
 
-    public List<Pedido_Coleta> getPedido_Coletas() {
-        return Pedido_Coletas;
+    public List<CollectionOrder> getPedido_Coletas() {
+        return collectionOrdersList;
     }
-*/
+
 public String toJson() {
     try {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
@@ -105,7 +105,7 @@ public static class Builder{
     public Builder(){
         user = new User();
     }
-    public Builder withId(Integer id){
+    public Builder withId(Long id){
         user.id = id;
         return this;
     }
