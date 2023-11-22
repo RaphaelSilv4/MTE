@@ -17,7 +17,6 @@ import jakarta.persistence.*;
 public class CollectionOrder implements Serializable {
     private static final long serialVersionUID = 1L;
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic
@@ -91,7 +90,7 @@ public class CollectionOrder implements Serializable {
     public User getUserId() {
         return userId;
     }
-    
+
     public void setUserId(User userId) {
         this.userId = userId;
     }
@@ -147,10 +146,12 @@ public class CollectionOrder implements Serializable {
             collectionOrder.id = id;
             return this;
         }
+
         public Builder withMoment(Instant moment){
             collectionOrder.moment = moment;
             return this;
         }
+
         public Builder withDescription(String description){
             collectionOrder.description = description;
             return this;
@@ -169,6 +170,7 @@ public class CollectionOrder implements Serializable {
             collectionOrder.userId = userId;
             return this;
         }
+
         public CollectionOrder build(){
             return collectionOrder;
         }
@@ -184,5 +186,4 @@ public class CollectionOrder implements Serializable {
                 ", userId=" + userId +
                 '}';
     }
-
 }
