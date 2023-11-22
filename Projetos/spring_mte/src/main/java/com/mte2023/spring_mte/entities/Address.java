@@ -111,8 +111,12 @@ public class Address implements Serializable{
             return false;
         return true;
     }
+    //todo:builder
+    /*
     private static class Builder(){
         private Address address;
 
     }
+
+     */
 }
