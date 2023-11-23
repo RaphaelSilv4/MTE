@@ -45,4 +45,5 @@ public class CollectionOrderResource {
         }
         throw new BadRequestException("Não foi encontrado nenhuma coleta no id informado", 404);
     }
+    //TODO : put and delete methods
 }

@@ -1,11 +1,11 @@
 package com.mte2023.spring_mte.entities;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import jakarta.persistence.*;
 
 @Entity
@@ -19,9 +19,9 @@ public class Address implements Serializable{
     @Column(name = "id")
     private Integer id;
     @Column(name = "cep")
-    private int cep;
+    private Integer cep;
     @Column(name = "house_number")
-    private int houseNumber;
+    private Integer houseNumber;
     @Column(name = "street")
     private String street;
     @Column(name = "district")
@@ -32,18 +32,18 @@ public class Address implements Serializable{
     private String state;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "endereco")
-    private List<User> users = new ArrayList<>();
+    @OneToMany(mappedBy = "addressId")
+    private List<CollectionOrder> collectionOrderList;
 
     public Address() {}
 
     public Integer getId() {
         return id;
     }
-    public int getCep() {
+    public Integer getCep() {
         return cep;
     }
-    public int getHouseNumber() {
+    public Integer getHouseNumber() {
         return houseNumber;
     }
     public String getStreet() {
@@ -63,11 +63,11 @@ public class Address implements Serializable{
         this.id = id;
     }
 
-    public void setCep(int cep) {
+    public void setCep(Integer cep) {
         this.cep = cep;
     }
 
-    public void setHouseNumber(int houseNumber) {
+    public void setHouseNumber(Integer houseNumber) {
         this.houseNumber = houseNumber;
     }
 
@@ -87,6 +87,22 @@ public class Address implements Serializable{
         this.state = state;
     }
 
+    public List<CollectionOrder> getCollectionOrderList() {
+        return collectionOrderList;
+    }
+
+    public void setCollectionOrderList(List<CollectionOrder> collectionOrderList) {
+        this.collectionOrderList = collectionOrderList;
+    }
+
+    public String toJson() {
+        try {
+            ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+            return ow.writeValueAsString(this);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -111,12 +127,41 @@ public class Address implements Serializable{
             return false;
         return true;
     }
-    //todo:builder
-    /*
-    private static class Builder(){
+
+    private static class Builder{
         private Address address;
 
+        public Builder(){ address = new Address();}
+        public Builder withId (Integer id){
+            address.id = id;
+            return this;
+        }
+        public Builder withCep (Integer cep){
+            address.cep = cep;
+            return this;
+        }
+        public Builder withHouseNumber (Integer houseNumber){
+            address.houseNumber = houseNumber;
+            return this;
+        }
+        public Builder withStreet (String street){
+            address.street = street;
+            return this;
+        }
+        public Builder withDistrict (String district){
+            address.district = district;
+            return this;
+        }
+        public Builder withCity (String city){
+            address.city = city;
+            return this;
+        }
+        public Builder withState (String state){
+            address.state = state;
+            return this;
+        }
+        public Address build(){return address;}
     }
 
-     */
+
 }

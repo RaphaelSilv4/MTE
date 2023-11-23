@@ -34,11 +34,18 @@ public class CollectionOrder implements Serializable {
 
     @Column(name = "user_id")
     private Integer userID;
+    @Column(name = "address_id")
+    private Integer addressID;
 
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)
     @JsonIgnore
     private User userId;
+
+    @ManyToOne
+    @JoinColumn(name = "address_id",referencedColumnName = "id", insertable = false, updatable = false)
+    @JsonIgnore
+    private Address addressId;
 
  //   private Payment payment;
     public CollectionOrder(){}
@@ -80,15 +87,32 @@ public class CollectionOrder implements Serializable {
     public void setUserId(User userId) {
         this.userId = userId;
     }
-    /*
-    public Payment getPayment() {
-        return payment;
+
+    public Integer getAddressID() {
+        return addressID;
     }
 
-    public void setPayment(Payment payment) {
-        this.payment = payment;
+    public void setAddressID(Integer addressID) {
+        this.addressID = addressID;
     }
-    */
+
+    public Address getAddressId() {
+        return addressId;
+    }
+
+    public void setAddressId(Address addressId) {
+        this.addressId = addressId;
+    }
+
+    /*
+        public Payment getPayment() {
+            return payment;
+        }
+
+        public void setPayment(Payment payment) {
+            this.payment = payment;
+        }
+        */
     public String toJson() {
     try {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
@@ -151,20 +175,19 @@ public class CollectionOrder implements Serializable {
             collectionOrder.userId = userId;
             return this;
         }
+        public Builder withAddressID(Integer addressID){
+            collectionOrder.addressID = addressID;
+            return this;
+        }
+        public Builder withAddressId(Address addressId){
+            collectionOrder.addressId = addressId;
+            return this;
+        }
         public CollectionOrder build(){
             return collectionOrder;
         }
 
     }
-    @Override
-    public String toString() {
-        return "CollectionOrder{" +
-                "id=" + id +
-                ", moment=" + moment +
-                ", description='" + description + '\'' +
-                ", userID=" + userID +
-                ", userId=" + userId +
-                '}';
-    }
+
 
 }

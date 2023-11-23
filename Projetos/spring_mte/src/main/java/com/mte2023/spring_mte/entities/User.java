@@ -30,12 +30,6 @@ public class User implements Serializable {
     @Column(name = "password")
     private String password;
 
-    //todo: status da coleta
-    /*
-        @ManyToOne
-        @JoinColumn(name = "address_id")
-        private Address endereco;
-    */
     @JsonIgnore
     @OneToMany(mappedBy = "userId")
     private List<CollectionOrder> collectionOrdersList;
@@ -81,15 +75,7 @@ public class User implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-/*
-    public Address getEndereco() {
-        return endereco;
-    }
 
-    public void setEndereco(Address endereco) {
-        this.endereco = endereco;
-    }
-*/
     public List<CollectionOrder> getCollectionOrdersList() {
         return collectionOrdersList;
 }
