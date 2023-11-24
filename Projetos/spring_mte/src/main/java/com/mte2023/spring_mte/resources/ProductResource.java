@@ -1,10 +1,8 @@
 package com.mte2023.spring_mte.resources;
 
 import com.mte2023.spring_mte.entities.Product;
-import com.mte2023.spring_mte.entities.User;
 import com.mte2023.spring_mte.exceptions_generic.BadRequestException;
 import com.mte2023.spring_mte.services.ProductService;
-import com.mte2023.spring_mte.services.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
