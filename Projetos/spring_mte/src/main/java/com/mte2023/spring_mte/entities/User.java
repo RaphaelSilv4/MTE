@@ -2,6 +2,8 @@ package com.mte2023.spring_mte.entities;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -26,11 +28,15 @@ public class User implements Serializable {
     private String phone;
     @Column(name = "password")
     private String password;
-
+    @Column(name = "address_id")
+    private Integer addressID;
     @JsonIgnore
     @OneToMany(mappedBy = "userId")
     private List<CollectionOrder> collectionOrdersList;
-
+    @ManyToOne
+    @JoinColumn(name = "address_id",referencedColumnName = "id", insertable = false, updatable = false)
+    @JsonIgnore
+    private Address addressId;
     public User() {}
 
     public Integer getId() {
@@ -79,8 +85,24 @@ public class User implements Serializable {
  public void setCollectionOrdersList(List<CollectionOrder> collectionOrdersList) {
         this.collectionOrdersList = collectionOrdersList;
     }
+    public Integer getAddressID() {
+        return addressID;
+    }
 
-public String toJson() {
+    public void setAddressID(Integer addressID) {
+        this.addressID = addressID;
+    }
+
+    public Address getAddressId() {
+        return addressId;
+    }
+
+    public void setAddressId(Address addressId) {
+        this.addressId = addressId;
+    }
+
+
+    public String toJson() {
     try {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
         return ow.writeValueAsString(this);
@@ -114,35 +136,29 @@ public static class Builder{
         user.password = password;
         return this;
     }
+    public Builder withAddressID(Integer addressID){
+        user.addressID = addressID;
+        return this;
+    }
+    public Builder withAddressId(Address addressId){
+        user.addressId = addressId;
+        return this;
+    }
     public User build(){
         return user;
     }
 }
 
     @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((id == null) ? 0 : id.hashCode());
-        return result;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(id, user.id);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        User other = (User) obj;
-        if (id == null) {
-            if (other.id != null)
-                return false;
-        } else if (!id.equals(other.id))
-            return false;
-        return true;
+    public int hashCode() {
+        return Objects.hash(id);
     }
-
-
 }
