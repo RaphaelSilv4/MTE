@@ -1,4 +1,4 @@
-package com.mte2023.spring_mte.entities;
+/*package com.mte2023.spring_mte.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -27,15 +27,15 @@ public class Payment implements Serializable {
 
     @OneToOne
     @MapsId
-    private CollectionOrder collectionOrder;
+    private Pedido_Coleta pedido_Coleta;
 
     public Payment(){}
 
-    public Payment(Long id, Instant moment, CollectionOrder collectionOrder) {
+    public Payment(Long id, Instant moment, Pedido_Coleta pedido_Coleta) {
         super();
         this.id = id;
         this.moment = moment;
-        this.collectionOrder = collectionOrder;
+        this.pedido_Coleta = pedido_Coleta;
     }
     
     public Long getId() {
@@ -54,12 +54,12 @@ public class Payment implements Serializable {
         this.moment = moment;
     }
 
-    public CollectionOrder getPedido_Coleta() {
-        return collectionOrder;
+    public Pedido_Coleta getPedido_Coleta() {
+        return pedido_Coleta;
     }
 
-    public void setPedido_Coleta(CollectionOrder collectionOrder) {
-        this.collectionOrder = collectionOrder;
+    public void setPedido_Coleta(Pedido_Coleta pedido_Coleta) {
+        this.pedido_Coleta = pedido_Coleta;
     }
 
     @Override
@@ -88,3 +88,4 @@ public class Payment implements Serializable {
     }
 
 }
+*/

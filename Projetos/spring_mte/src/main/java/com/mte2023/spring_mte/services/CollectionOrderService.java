@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.mte2023.spring_mte.entities.CollectionOrder;
+import com.mte2023.spring_mte.entities.User;
 import com.mte2023.spring_mte.repositories.CollectionOrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +22,7 @@ public class CollectionOrderService {
         return collectionOrderRepository.findAll();
     }
 
-    public Optional<CollectionOrder> findById(Long id){
+    public Optional<CollectionOrder> findById(Integer id){
         return collectionOrderRepository.findById(id);
     }
 
@@ -33,7 +34,7 @@ public class CollectionOrderService {
 
     public void saveAll(List<CollectionOrder> collectionOrderList) { collectionOrderRepository.saveAll(collectionOrderList);}
     //delete methods
-    public void delete(Long id){
+    public void delete(Integer id){
         collectionOrderRepository.deleteById(id);
     }
     //flush methods

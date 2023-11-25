@@ -1,129 +1,158 @@
 package com.mte2023.spring_mte.entities;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tb_address")
+@Table(name = "address")
 public class Address implements Serializable{
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    private int cep;
-    private int numero_casa;
-    private String nome_rua;
-    private String nome_bairro;
-    private String cidade;
-    private String estado_federativo;
+    @Basic
+    @Column(name = "id")
+    private Integer id;
+    @Column(name = "cep")
+    private Integer cep;
+    @Column(name = "house_number")
+    private Integer houseNumber;
+    @Column(name = "street")
+    private String street;
+    @Column(name = "district")
+    private String district;
+    @Column(name = "city")
+    private String city;
+    @Column(name = "state")
+    private String state;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "address")
-    private List<User> users = new ArrayList<>();
+    @OneToMany(mappedBy = "addressId")
+    private List<User> userList;
 
     public Address() {}
 
-    public Address(Long id, int cep, int numero_casa, String nome_rua, String nome_bairro, String cidade,
-            String estado_federativo) {
-        this.id = id;
-        this.cep = cep;
-        this.numero_casa = numero_casa;
-        this.nome_rua = nome_rua;
-        this.nome_bairro = nome_bairro;
-        this.cidade = cidade;
-        this.estado_federativo = estado_federativo;
-    }
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
+    public Integer getCep() {
+        return cep;
+    }
+    public Integer getHouseNumber() {
+        return houseNumber;
+    }
+    public String getStreet() {
+        return street;
+    }
+    public String getDistrict() {
+        return district;
+    }
+    public String getState() {
+        return state;
+    }
+    public String getCity() {
+        return city;
+    }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getCep() {
-        return cep;
-    }
-
-    public void setCep(int cep) {
+    public void setCep(Integer cep) {
         this.cep = cep;
     }
 
-    public int getNumero_casa() {
-        return numero_casa;
+    public void setHouseNumber(Integer houseNumber) {
+        this.houseNumber = houseNumber;
     }
 
-    public void setNumero_casa(int numero_casa) {
-        this.numero_casa = numero_casa;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
-    public String getNome_rua() {
-        return nome_rua;
+    public void setDistrict(String district) {
+        this.district = district;
     }
 
-    public void setNome_rua(String nome_rua) {
-        this.nome_rua = nome_rua;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getNome_bairro() {
-        return nome_bairro;
+    public void setState(String state) {
+        this.state = state;
     }
 
-    public void setNome_bairro(String nome_bairro) {
-        this.nome_bairro = nome_bairro;
+    public List<User> getUserList() {
+        return userList;
     }
 
-    public String getCidade() {
-        return cidade;
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
     }
 
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
+    public String toJson() {
+        try {
+            ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+            return ow.writeValueAsString(this);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public String getEstado_federativo() {
-        return estado_federativo;
-    }
-
-    public void setEstado_federativo(String estado_federativo) {
-        this.estado_federativo = estado_federativo;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Address address = (Address) o;
+        return Objects.equals(id, address.id);
     }
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((id == null) ? 0 : id.hashCode());
-        return result;
+        return Objects.hash(id);
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Address other = (Address) obj;
-        if (id == null) {
-            if (other.id != null)
-                return false;
-        } else if (!id.equals(other.id))
-            return false;
-        return true;
+    private static class Builder{
+        private Address address;
+
+        public Builder(){ address = new Address();}
+        public Builder withId (Integer id){
+            address.id = id;
+            return this;
+        }
+        public Builder withCep (Integer cep){
+            address.cep = cep;
+            return this;
+        }
+        public Builder withHouseNumber (Integer houseNumber){
+            address.houseNumber = houseNumber;
+            return this;
+        }
+        public Builder withStreet (String street){
+            address.street = street;
+            return this;
+        }
+        public Builder withDistrict (String district){
+            address.district = district;
+            return this;
+        }
+        public Builder withCity (String city){
+            address.city = city;
+            return this;
+        }
+        public Builder withState (String state){
+            address.state = state;
+            return this;
+        }
+        public Address build(){return address;}
     }
+
+
 }

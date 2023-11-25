@@ -1,9 +1,10 @@
-package com.mte2023.spring_mte.controllers;
+package com.mte2023.spring_mte.resources;
 
 import java.util.List;
 import java.util.Optional;
 
 import com.mte2023.spring_mte.entities.CollectionOrder;
+import com.mte2023.spring_mte.entities.User;
 import com.mte2023.spring_mte.exceptions_generic.BadRequestException;
 import com.mte2023.spring_mte.services.CollectionOrderService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -16,10 +17,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 @RequestMapping(path = "/collection_order", produces = "application/json;charset=UTF-8")
 @Tag(name = "collection_order")
-public class CollectionOrderController {
+public class CollectionOrderResource {
 
     @Autowired
     private CollectionOrderService collectionOrderService;
@@ -36,11 +38,12 @@ public class CollectionOrderController {
 
     @Operation(summary = "Busca uma determinado coleta na base de dados a partir de seu identificador", method = "GET")
     @GetMapping(path = "/{id}")
-    public ResponseEntity<?> getCollectionOrderById(@PathVariable Long id){
+    public ResponseEntity<?> getCollectionOrderById(@PathVariable Integer id){
         Optional<CollectionOrder> collectionOrder = collectionOrderService.findById(id);
         if (collectionOrder.isPresent()){
             return new ResponseEntity<>(collectionOrder , HttpStatus.OK);
         }
         throw new BadRequestException("Não foi encontrado nenhuma coleta no id informado", 404);
     }
+    //TODO : put and delete methods
 }
