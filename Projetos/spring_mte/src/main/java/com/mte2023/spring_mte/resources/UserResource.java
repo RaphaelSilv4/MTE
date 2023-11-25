@@ -36,7 +36,7 @@ public class UserResource {
         if (userList != null) {
             return new ResponseEntity<>(userList, HttpStatus.OK);
         }
-        throw new BadRequestException("Não foi encontrado nenhum usuário no id informado", 404);
+        throw new BadRequestException("Não foi encontrado nenhum usuário", 404);
     }
 
     @Operation(summary = "Busca um determinado usuário na base de dados a partir de seu identificador", method = "GET")
