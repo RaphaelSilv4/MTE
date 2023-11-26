@@ -80,12 +80,15 @@ public class CollectionOrder implements Serializable {
     public Integer getUserID(){
         return userID;
     }
+
     public void setUserID(Integer userID){
         this.userID = userID;
     }
+
     public User getUserId() {
         return userId;
     }
+
     public void setUserId(User userId) {
         this.userId = userId;
     }
@@ -131,6 +134,7 @@ public class CollectionOrder implements Serializable {
             return false;
         return true;
     }
+
     private static class Builder{
 
         private CollectionOrder collectionOrder;
@@ -156,6 +160,7 @@ public class CollectionOrder implements Serializable {
             collectionOrder.userID = userID;
             return this;
         }
+
         public Builder withUserId(User userId){
             collectionOrder.userId = userId;
             return this;

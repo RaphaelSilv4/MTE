@@ -60,7 +60,7 @@ public class Payment implements Serializable {
         return collectionOrder;
     }
 
-    public void setPedido_Coleta(CollectionOrder collectionOrder) {
+    public void setCollectionOrder(CollectionOrder collectionOrder) {
         this.collectionOrder = collectionOrder;
     }
 
