@@ -38,6 +38,7 @@ public class CollectionOrder implements Serializable {
     private User userId;
 
     @OneToOne
+    @PrimaryKeyJoinColumn(name="payment", referencedColumnName="id")
     private Payment payment;
 
     public CollectionOrder(){}
@@ -135,7 +136,7 @@ public class CollectionOrder implements Serializable {
             collectionOrder.moment = moment;
             return this;
         }
-        
+
         public Builder withDescription(String description){
             collectionOrder.description = description;
             return this;
