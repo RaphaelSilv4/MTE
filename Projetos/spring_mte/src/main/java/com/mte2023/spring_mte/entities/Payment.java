@@ -5,6 +5,8 @@ import java.time.Instant;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import jakarta.persistence.Basic;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,7 +22,9 @@ public class Payment implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Basic
+    @Column(name = "id")
+    private Integer id;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
     private Instant moment;
@@ -31,18 +35,18 @@ public class Payment implements Serializable {
 
     public Payment(){}
 
-    public Payment(Long id, Instant moment, CollectionOrder collectionOrder) {
+    public Payment(Integer id, Instant moment, CollectionOrder collectionOrder) {
         super();
         this.id = id;
         this.moment = moment;
         this.collectionOrder = collectionOrder;
     }
-    
-    public Long getId() {
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

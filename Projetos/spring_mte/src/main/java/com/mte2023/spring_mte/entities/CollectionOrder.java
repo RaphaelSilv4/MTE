@@ -42,7 +42,6 @@ public class CollectionOrder implements Serializable {
 
     public CollectionOrder(){}
 
-
     public Integer getId() {
         return id;
     }
