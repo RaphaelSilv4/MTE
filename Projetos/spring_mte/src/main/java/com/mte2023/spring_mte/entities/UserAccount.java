@@ -16,7 +16,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "user_account")
-public class UserAccount implements Serializable{
+public class UserAccount {
 
     @Id
     @Column(name="user_id")
