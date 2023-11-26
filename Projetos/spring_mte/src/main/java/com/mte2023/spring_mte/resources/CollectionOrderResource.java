@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.mte2023.spring_mte.entities.CollectionOrder;
+import com.mte2023.spring_mte.entities.Product;
 import com.mte2023.spring_mte.entities.User;
 import com.mte2023.spring_mte.exceptions_generic.BadRequestException;
 import com.mte2023.spring_mte.services.CollectionOrderService;
@@ -12,10 +13,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -45,5 +43,22 @@ public class CollectionOrderResource {
         }
         throw new BadRequestException("Não foi encontrado nenhuma coleta no id informado", 404);
     }
-    //TODO : put and delete methods
+    @Operation(summary = "Realiza a inserção de um Pedido de coleta na base de dados", method = "POST")
+    @PostMapping
+    public ResponseEntity<?> createCollectionOrder(@RequestBody CollectionOrder collectionOrder){
+        if(collectionOrder != null){
+            collectionOrderService.saveAndFlush(collectionOrder);
+            return new ResponseEntity<>("Pedido de coleta criado com sucesso.", HttpStatus.CREATED);
+        }
+        throw new BadRequestException("Erro ao criar o Produto.", 400);
+    }
+    @Operation(summary = "Realiza a remoção de uma Ordem de coleta na base de dados a partir do seu identificador", method = "DELETE")
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<?> deleteProductById(@PathVariable Integer id){
+        if (collectionOrderService.findById(id).isPresent()){
+            collectionOrderService.delete(id);
+            return new ResponseEntity<>("Ordem de coleta removida com sucesso.", HttpStatus.OK);
+        }
+        throw new BadRequestException("Erro ao deletar o produto.", 400);
+    }
 }
