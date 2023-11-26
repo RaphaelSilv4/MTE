@@ -1,17 +1,14 @@
 package com.mte2023.spring_mte.resources;
 
-import com.mte2023.spring_mte.entities.User;
 import com.mte2023.spring_mte.entities.UserAccount;
 import com.mte2023.spring_mte.exceptions_generic.BadRequestException;
 import com.mte2023.spring_mte.services.UserAccountService;
-import com.mte2023.spring_mte.services.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 
