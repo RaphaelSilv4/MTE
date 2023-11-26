@@ -81,10 +81,12 @@ public class User implements Serializable {
 
     public List<CollectionOrder> getCollectionOrdersList() {
         return collectionOrdersList;
-}
- public void setCollectionOrdersList(List<CollectionOrder> collectionOrdersList) {
+    }
+
+    public void setCollectionOrdersList(List<CollectionOrder> collectionOrdersList) {
         this.collectionOrdersList = collectionOrdersList;
     }
+
     public Integer getAddressID() {
         return addressID;
     }
@@ -100,8 +102,7 @@ public class User implements Serializable {
     public void setAddressId(Address addressId) {
         this.addressId = addressId;
     }
-
-
+    
     public String toJson() {
     try {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();

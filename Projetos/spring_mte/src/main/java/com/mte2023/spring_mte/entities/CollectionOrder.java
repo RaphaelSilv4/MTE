@@ -130,10 +130,12 @@ public class CollectionOrder implements Serializable {
             collectionOrder.id = id;
             return this;
         }
+
         public Builder withMoment(Instant moment){
             collectionOrder.moment = moment;
             return this;
         }
+        
         public Builder withDescription(String description){
             collectionOrder.description = description;
             return this;
