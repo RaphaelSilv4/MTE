@@ -1,6 +1,4 @@
-
 package com.mte2023.spring_mte.entities;
-
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -17,7 +15,6 @@ import jakarta.persistence.*;
 @Table(name = "collection_order")
 public class CollectionOrder implements Serializable {
     private static final long serialVersionUID = 1L;
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,9 +37,9 @@ public class CollectionOrder implements Serializable {
     @JsonIgnore
     private User userId;
 
+    @OneToOne
+    private Payment payment;
 
-
- //   private Payment payment;
     public CollectionOrder(){}
 
 
@@ -83,24 +80,22 @@ public class CollectionOrder implements Serializable {
         this.userId = userId;
     }
 
-    /*
-        public Payment getPayment() {
-            return payment;
-        }
+    public Payment getPayment() {
+        return payment;
+    }
 
-        public void setPayment(Payment payment) {
-            this.payment = payment;
-        }
-        */
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
     public String toJson() {
     try {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
         return ow.writeValueAsString(this);
     } catch (JsonProcessingException e) {
         throw new RuntimeException(e);
+        }
     }
-}
-
 
     @Override
     public int hashCode() {
@@ -109,7 +104,6 @@ public class CollectionOrder implements Serializable {
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         return result;
     }
-
 
     @Override
     public boolean equals(Object obj) {
@@ -160,6 +154,5 @@ public class CollectionOrder implements Serializable {
         }
 
     }
-
 
 }
