@@ -27,9 +27,13 @@ public class PaymentService {
     public void save(Payment collectionOrder){
         PaymentRepository.save(collectionOrder);
     }
-    public void saveAndFlush(Payment collectionOrder) { PaymentRepository.saveAndFlush(collectionOrder);}
+    public void saveAndFlush(Payment collectionOrder) { 
+        PaymentRepository.saveAndFlush(collectionOrder);
+    }
 
-    public void saveAll(List<Payment> collectionOrderList) { PaymentRepository.saveAll(collectionOrderList);}
+    public void saveAll(List<Payment> collectionOrderList) { 
+        PaymentRepository.saveAll(collectionOrderList);
+    }
     //delete methods
     public void delete(Integer id){
         PaymentRepository.deleteById(id);
