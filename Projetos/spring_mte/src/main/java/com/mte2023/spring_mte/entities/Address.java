@@ -32,7 +32,6 @@ public class Address implements Serializable{
     private String city;
     @Column(name = "state")
     private String state;
-
     @JsonIgnore
     @OneToMany(mappedBy = "addressId")
     private List<User> userList;
