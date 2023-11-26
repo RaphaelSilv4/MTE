@@ -1,10 +1,12 @@
-/*package com.mte2023.spring_mte.entities;
+package com.mte2023.spring_mte.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import jakarta.persistence.Basic;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,35 +16,37 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_payment")
+@Table(name = "payment")
 public class Payment implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Basic
+    @Column(name = "id")
+    private Integer id;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
     private Instant moment;
 
     @OneToOne
     @MapsId
-    private Pedido_Coleta pedido_Coleta;
+    private CollectionOrder collectionOrder;
 
     public Payment(){}
 
-    public Payment(Long id, Instant moment, Pedido_Coleta pedido_Coleta) {
+    public Payment(Integer id, Instant moment, CollectionOrder collectionOrder) {
         super();
         this.id = id;
         this.moment = moment;
-        this.pedido_Coleta = pedido_Coleta;
+        this.collectionOrder = collectionOrder;
     }
-    
-    public Long getId() {
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -54,12 +58,12 @@ public class Payment implements Serializable {
         this.moment = moment;
     }
 
-    public Pedido_Coleta getPedido_Coleta() {
-        return pedido_Coleta;
+    public CollectionOrder getCollectionOrder() {
+        return collectionOrder;
     }
 
-    public void setPedido_Coleta(Pedido_Coleta pedido_Coleta) {
-        this.pedido_Coleta = pedido_Coleta;
+    public void setPedido_Coleta(CollectionOrder collectionOrder) {
+        this.collectionOrder = collectionOrder;
     }
 
     @Override
@@ -88,4 +92,3 @@ public class Payment implements Serializable {
     }
 
 }
-*/

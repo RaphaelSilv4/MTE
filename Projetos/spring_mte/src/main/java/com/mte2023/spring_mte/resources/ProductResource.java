@@ -1,7 +1,6 @@
 package com.mte2023.spring_mte.resources;
 
 import com.mte2023.spring_mte.entities.Product;
-import com.mte2023.spring_mte.entities.User;
 import com.mte2023.spring_mte.exceptions_generic.BadRequestException;
 import com.mte2023.spring_mte.services.ProductService;
 import io.swagger.v3.oas.annotations.Operation;

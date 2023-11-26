@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import com.mte2023.spring_mte.entities.CollectionOrder;
-import com.mte2023.spring_mte.entities.Product;
-import com.mte2023.spring_mte.entities.User;
 import com.mte2023.spring_mte.exceptions_generic.BadRequestException;
 import com.mte2023.spring_mte.services.CollectionOrderService;
 import io.swagger.v3.oas.annotations.Operation;
