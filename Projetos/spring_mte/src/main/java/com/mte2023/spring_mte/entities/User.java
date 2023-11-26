@@ -8,7 +8,17 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import jakarta.persistence.*;
+
+import jakarta.persistence.Basic;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "users")
@@ -81,10 +91,12 @@ public class User implements Serializable {
 
     public List<CollectionOrder> getCollectionOrdersList() {
         return collectionOrdersList;
-}
- public void setCollectionOrdersList(List<CollectionOrder> collectionOrdersList) {
+    }
+
+    public void setCollectionOrdersList(List<CollectionOrder> collectionOrdersList) {
         this.collectionOrdersList = collectionOrdersList;
     }
+
     public Integer getAddressID() {
         return addressID;
     }
@@ -100,8 +112,7 @@ public class User implements Serializable {
     public void setAddressId(Address addressId) {
         this.addressId = addressId;
     }
-
-
+    
     public String toJson() {
     try {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();

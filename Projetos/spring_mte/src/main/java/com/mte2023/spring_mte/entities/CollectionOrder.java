@@ -3,13 +3,23 @@ package com.mte2023.spring_mte.entities;
 import java.io.Serializable;
 import java.time.Instant;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Basic;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "collection_order")
@@ -38,6 +48,7 @@ public class CollectionOrder implements Serializable {
     private User userId;
 
     @OneToOne
+    @PrimaryKeyJoinColumn(name="payment", referencedColumnName="id")
     private Payment payment;
 
     public CollectionOrder(){}
@@ -130,10 +141,12 @@ public class CollectionOrder implements Serializable {
             collectionOrder.id = id;
             return this;
         }
+
         public Builder withMoment(Instant moment){
             collectionOrder.moment = moment;
             return this;
         }
+
         public Builder withDescription(String description){
             collectionOrder.description = description;
             return this;

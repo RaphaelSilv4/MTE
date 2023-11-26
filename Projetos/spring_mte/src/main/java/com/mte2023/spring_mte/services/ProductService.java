@@ -1,11 +1,14 @@
 package com.mte2023.spring_mte.services;
 
-import com.mte2023.spring_mte.entities.Product;
-import com.mte2023.spring_mte.repositories.ProductRepository;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
+import com.mte2023.spring_mte.entities.Product;
+import com.mte2023.spring_mte.repositories.ProductRepository;
 
 @Service
 public class ProductService {
@@ -25,9 +28,13 @@ public class ProductService {
     public void save(Product product){
         productRepository.save(product);
     }
-    public void saveAndFlush(Product product) { productRepository.saveAndFlush(product);}
+    public void saveAndFlush(Product product) { 
+        productRepository.saveAndFlush(product);
+    }
 
-    public void saveAll(List<Product> productList) { productRepository.saveAll(productList);}
+    public void saveAll(List<Product> productList) { 
+        productRepository.saveAll(productList);
+    }
     //delete methods
     public void delete(Integer id){
         productRepository.deleteById(id);

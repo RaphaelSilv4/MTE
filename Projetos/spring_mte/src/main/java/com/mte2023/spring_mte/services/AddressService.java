@@ -2,10 +2,12 @@ package com.mte2023.spring_mte.services;
 
 import java.util.List;
 import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.mte2023.spring_mte.entities.Address;
 import com.mte2023.spring_mte.repositories.AddressRepository;
-import org.springframework.stereotype.Service;
 
 @Service
 public class AddressService {
