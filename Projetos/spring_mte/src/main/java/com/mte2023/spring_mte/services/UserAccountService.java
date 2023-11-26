@@ -3,9 +3,12 @@ package com.mte2023.spring_mte.services;
 import com.mte2023.spring_mte.entities.UserAccount;
 import com.mte2023.spring_mte.repositories.UserAccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class UserAccountService {
     @Autowired
     UserAccountRepository userAccountRepository;
